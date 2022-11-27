@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Мишка</title>
+  </head>
+<body class="page__budy">
+  <header class="main-header">
+    <nav class="main-nav">
+      <a class="main-nav__logo main-nav__logo--phone">Логтип</a>
+      <a href="" class="main-nav__menu-open">Открыть меню</a>
+      <ul class="main-nav-page">
+        <li class="main-nav-page__item">
+          <a href="#" class="main-nav-page__link">Каталог товаров</a>
+        </li>
+        <li class="main-nav-page__item">
+          <a href="#" class="main-nav-page__link">Вязание на заказ</a>
+        </li>
+      </ul>
+      <ul class="user-menu">
+        <li class="user-menu__item">
+          <a href="#" class="user-menu__link">Поиск по сайту</a>
+        </li>
+        <li class="user-menu__item">
+          <a href="#" class="user-menu__link">Корзина: пока пуста</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <h1 class="page-title">Вязание на заказ</h1>
+  <main class="main">
+    <p class="page__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+    <form action="#" method="get">
+      <ul class="fieldset-group">
+        <li class="fieldset-group__item">
+          <fieldset class="fieldset">
+            <legend class="fieldset__legend">ТИП</legend>
+            <ul class="fieldset__list">
+              <label for="accessories" class="fieldset__label">Аксессуар для интерьера
+                <input type="radio" name="accessories" id="accessories" class="fieldset__radio block-hidden">
+              </label>
+            </ul>
+            <ul class="fieldset__list">
+              <label for="toy" class="fieldset__label">Детская игрушка
+                <input type="radio" name="toy" id="toy" class="fieldset__radio block-hidden">
+              </label>
+            </ul>
+          </fieldset>
+        </li>
+        <li class="fieldset-group__item">
+          <fieldset class="fieldset">
+            <legend class="fieldset__legend">ЦВет</legend>
+            <ul class="fieldset">
+              <li class="fieldset__item">
+                <label for="white" class="fieldset__label">Белый
+                  <input type="checkbox" name="white" id="white" class="fieldset__check">
+                </label>
+              </li>
+              <li class="fieldset__item">
+                <label for="gray" class="fieldset__label">Серый
+                  <input type="checkbox" name="gray" id="gray" class="fieldset__check">
+                </label>
+              </li>
+              <li class="fieldset__item">
+                <label for="tiffany" class="fieldset__label">Тиффани
+                  <input type="checkbox" name="tiffany" id="tiffany" class="fieldset__check">
+                </label>
+              </li>
+              <li class="fieldset__item">
+                <label for="black" class="fieldset__label">Черный
+                  <input type="checkbox" name="black" id="black" class="fieldset__check">
+                </label>
+              </li>
+              <li class="fieldset__item">
+                <label for="pink" class="fieldset__label">Розовый
+                  <input type="checkbox" name="pink" id="pink" class="fieldset__check">
+                </label>
+              </li>
+              <li class="fieldset__item">
+                <label for="orange" class="fieldset__label">Оранжевый
+                  <input type="checkbox" name="orange" id="orange" class="fieldset__check">
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </li>
+        <li class="fieldset-group__item">
+          <fieldset class="fieldset">
+            <legend class="fieldset__legend">ФИО</legend>
+            <label for="" class="fieldset__label">Имя:</label>
+            <input type="text" name="name" id="name" class="fieldset__edit" placeholder="Введите ваше имя*" required>
+            <label for="" class="fieldset__label">Фамилия:</label>
+            <input type="text" name="surname" id="surname" class="fieldset__edit" placeholder="Укажите фамилию*" required>
+            <label for="" class="fieldset__label">Отчество:</label>
+            <input type="text" name="patronymic" id="patronymic" class="fieldset__edit" placeholder="Отчество, если желаете">
+          </fieldset>
+        </li>
+        <li class="fieldset-group__item">
+          <fieldset class="fieldset">
+            <legend class="fieldset__legend">тел</legend>
+            <input type="text" name="phone-number" id="phone-number" class="fieldset__edit" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+          </fieldset>
+        </li>
+        <li class="fieldset-group__item">
+          <fieldset class="fieldset">
+            <legend class="fieldset__legend">E-mail</legend>
+            <input type="text" name="mail" id="mail" class="fieldset__edit" placeholder="Ваш Email*" required>
+          </fieldset>
+        </li>
+        <li class="fieldset-group__item">
+          <fieldset class="fieldset">
+            <legend class="fieldset__legend">Доп</legend>
+            <label for="additionally" class="fieldset__label">Имя:</label>
+            <textarea name="additionally" id="additionally" class="fieldset__edit" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          </fieldset>
+        </li>
+      </ul>
+      <p class="fooutnote">*Поля обязательны для заполнения</p>
+      <input class="button" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
+    </form>
+  </main>
+  <footer class="main-footer">
+    <div class="main-footer__social social">
+      <a href="" class="social__link social__link--vkontakte"></a>
+      <a href="" class="social__link social__link--youtube"></a>
+      <a href="" class="social__link social__link--telegram"></a>
+    </div>
+    <div class="main-footer__copyright copyright">
+      <b class="copyright__text">Разработано:</b>
+      <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">HTML Academy</a>
+    </div>
+  </footer>
+</body>
+</html>
