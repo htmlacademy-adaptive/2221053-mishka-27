@@ -18,27 +18,24 @@
           </li>
         </ul>
         <ul class="user-menu">
-          <li class="user-menu_item">
+          <li class="user-menu__item">
             <a href="#" class="user-menu__link">Поиск по сайту</a>
           </li>
-          <li class="user-menu_item">
+          <li class="user-menu__item">
             <a href="#" class="user-menu__link">Корзина: пока пуста</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="main-index">
-      <div class="hero">
-        <img src="" alt="Примеры наших изделий." class="hero__image">
-        <h1 class="hero__page-title">Милые штуки ручной<br>работы для дома</h1>
-      </div>
+      <h1 class="page-title">Милые штуки ручной<br>работы для дома</h1>
       <nav class="category-nav">
         <ul class="categoryes">
           <li class="categoryes__item">
-            <a href="#" class="categoryes_link">Предметы интерьера</a>
+            <a href="#" class="categoryes__link categoryes__link--theme-light">Предметы интерьера</a>
           </li>
           <li class="categoryes__item">
-            <a href="#" class="categoryes_link">Детские игрушки</a>
+            <a href="#" class="categoryes__link categoryes__link--theme-dark">Детские игрушки</a>
           </li>
         </ul>
       </nav>
@@ -46,7 +43,7 @@
         <section class="promo">
           <h2 class="section-title">Вязаные корзинки</h2>
           <p class="promo__type">ТОВАР НЕДЕЛИ</p>
-          <div class="producn-promo">
+          <div class="product-promo">
             <p class="product-promo__description">Экологически чистая пряжа,
               ручная работа. Доступны в шести расцветках и трёх размерах.</p>
             <dl class="product-promo-parameter">
@@ -83,9 +80,9 @@
                 у популярных инстамамочек. 
                 В отчаянии, я накупила аксессуаров и игрушек в Мишке, 
                 и мои фотографии сразу стали более стильными, а также набирают больше лайков!</blockquote>
-              <p class="comment__author">Анастасия Красильникова
-                <span class="comment-author-span">@misssssiskras</span>
-              </p>
+              <cite class="comment__author">Анастасия Красильникова
+                <p class="comment__author-login">@misssssiskras</p>
+              </cite>
             </li>
           </ul>
           <nav class="comment__nav">
@@ -118,5 +115,34 @@
         <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">HTML Academy</a>
       </div>
     </footer>
+    <article class="add-product-basket">
+      <h2 class="section-title">Добавить<br>в корзину</h2>
+      <form action="#" method="GET">
+        <fieldset class="product-size">
+          <legend class="product-size__legend">Выберите размер:</legend>
+          <ul class="product-size">
+            <li class="product-size__item">
+              <label for="" class="product-size__label">
+                <input type="radio" class="product-size__radio block-hidden">
+                S
+              </label>
+            </li>
+            <li class="product-size__item">
+              <label for="" class="product-size__label">
+                <input type="radio" class="product-size__radio block-hidden">
+                M
+              </label>
+            </li>
+            <li class="product-size__item">
+              <label for="" class="product-size__label">
+                <input type="radio" class="product-size__radio block-hidden">
+                L
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <input class="button" type="submit">Добавить</button>
+      </form>
+    </article>
   </body>
 </html>
