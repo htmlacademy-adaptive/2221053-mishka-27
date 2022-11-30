@@ -1,0 +1,132 @@
+:root {
+  --light-green: #63d1bb;
+  --dark-green: #56c3b2;
+  --black-color: #000000;
+  --white-color: #ffffff;
+  --content-width: 260px;
+}
+
+@font-face {
+  font-family: "Opensans";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/source/fonts/opensans.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Opensans";
+  font-weight: 700;
+  font-style: normal;
+  src: url("/source/fonts/opensansbold.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Opensans";
+  font-weight: 700;
+  font-style: normal;
+  src: url("/source/fonts/opensansbold.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Opensans";
+  font-weight: 400;
+  font-style: normal;
+  src: url("/source/fonts/opensans.woff") format("woff");
+  font-display: swap;
+}
+.page {
+  height: 100%;
+}
+
+.page__body {
+  font-family: "Opensans", "Arial", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 24px;
+  min-width: var(--content-width)10px;
+  margin: 0;
+  color: var(--black-color);
+  background: var(--white-color);
+}
+
+.main-header {
+  mix-blend-mode: normal;
+  box-shadow: 0px 1px 0px #ECECEC, inset 0px 1px 0px #ECECEC;
+}
+
+.main-nav {
+  font-style: normal;
+  font-weight: 700;
+}
+
+.main-nav__menu-open {
+  font-size: 0;
+  line-height: 0;
+}
+
+.main-nav__link {
+  display: block;
+  color: var(--black-color);
+  text-decoration: none;
+}
+
+.main-nav__ico {
+  mix-blend-mode: normal;
+  opacity: 0.2;
+}
+
+.hero {
+  background-image: url("/source/img/hero-mobile.png");
+  background-repeat: no-repeat;
+}
+
+.hero__page-title {
+  background-color: transparent;
+  padding: 73px 0 120px;
+}
+
+.page-title {
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 30px;
+}
+
+.categories {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+}
+
+.categories__item {
+  background-color: var(--light-green);
+}
+
+.categories__link {
+  display: block;
+  color: var(--white-color);
+  text-decoration: none;
+  padding-top: 24px;
+  padding-bottom: 31px;
+}
+.categories__link--dark {
+  background-color: var(--dark-green);
+}
+
+.promo__type {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: var(--light-green);
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+.product-promo {
+  font-size: 15px;
+}
+/*# sourceMappingURL=style.css.map */
