@@ -1,1 +1,10 @@
-// Начните писать стили здесь
+@use "variables";
+@use "blocks/page";
+@use "blocks/header/main-header";
+@use "blocks/header/main-nav";
+@use "blocks/main/hero";
+@use "blocks/main/page-title";
+@use "blocks/main/categories";
+@use "blocks/main/promo";
+@use "./blocks/main/section-title";
+@use "./blocks/main/product-promo";

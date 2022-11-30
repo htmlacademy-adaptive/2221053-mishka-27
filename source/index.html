@@ -5,31 +5,38 @@
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Мишка</title>
   </head>
-  <body class="page__budy">
+  <body class="page__body">
     <header class="main-header">
       <nav class="main-nav">
-        <a class="main-nav__logo main-nav__logo--phone">Логтип</a>
+        <a class="main-nav__logo main-nav__logo--phone">Логотип</a>
         <a class="main-nav__menu-open" href="">Открыть меню</a>
-        <ul class="main-nav-page">
-          <li class="main-nav-page__item">
-            <a class="main-nav-page__link" href="#">Каталог товаров</a>
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Каталог товаров</a>
           </li>
-          <li class="main-nav-page__item">
-            <a class="main-nav-page__link" href="#">Вязание на заказ</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Вязание на заказ</a>
           </li>
         </ul>
         <ul class="main-nav">
-          <li class="main-nav__item--ico-search">
-            <a class="user-menu__link" href="#">Поиск по сайту</a>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--ico-search" href="#">
+              <svg class="main-nav__ico" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17.6932 16.0568L14.2159 12.5795C15.2386 11.25 15.75 9.61364 15.75 7.875C15.75 3.47727 12.2727 0 7.875 0C3.47727 0 0 3.47727 0 7.875C0 12.2727 3.47727 15.75 7.875 15.75C9.61364 15.75 11.25 15.1364 12.5795 14.2159L16.0568 17.6932C16.2614 17.8977 16.4659 18 16.875 18C17.4886 18 18 17.4886 18 16.875C18 16.6705 17.8977 16.3636 17.6932 16.0568ZM2.25 7.875C2.25 4.80682 4.80682 2.25 7.875 2.25C10.9432 2.25 13.5 4.80682 13.5 7.875C13.5 10.9432 10.9432 13.5 7.875 13.5C4.80682 13.5 2.25 10.9432 2.25 7.875Z" fill="black"/>
+              </svg>
+              <span>Поиск по сайту</span>
+            </a>
           </li>
           <li class="main-nav__item">
-            <a class="user-menu__link--ico--basket" href="#">Корзина: пока пуста</a>
+            <a class="main-nav__link main-nav__link--ico--basket" href="#">Корзина: пока пуста</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="main-page">
-      <h1 class="page-title page-title__theme-photo">Милые штуки ручной работы для дома</h1>
+      <div class="hero">
+        <h1 class="hero__page-title page-title">Милые штуки ручной работы для дома</h1>
+      </div>
       <nav class="category-nav">
         <ul class="categories">
           <li class="categories__item">
