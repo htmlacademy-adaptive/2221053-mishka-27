@@ -1,0 +1,43 @@
+@use "../mixins";
+
+.form__fieldset {
+  padding: 0;
+  border: none;
+  border-top: 1px solid var(--form-color);
+
+  &--none {
+    border-top: unset;
+  }
+}
+
+.form__legend {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 16px;
+  color: var(--light-green);
+
+  &--modal {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 30px;
+    color: var(--light-black);
+  }
+}
+
+.form__list {
+  @include mixins.list-reset;
+}
+
+.form__label {
+  font-weight: 700;
+  line-height: 18px;
+
+  &--modal {
+    line-height: 16px;
+  }
+}
+
+.form__edit {
+  font-size: 17px;
+  line-height: 18px;
+}

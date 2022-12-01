@@ -1,0 +1,14 @@
+.hero {
+  background-color: #f1f1f1;
+  padding: 73px 0;
+
+  &--img {
+    background-image: url("/img/hero-mobile.png");
+    background-repeat: no-repeat;
+    background-color: unset;
+  }
+}
+
+.hero__page-title {
+  background-color: transparent;
+}

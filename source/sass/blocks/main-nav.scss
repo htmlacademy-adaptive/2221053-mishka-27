@@ -1,4 +1,4 @@
-@use "../../mixins.scss";
+@use "../mixins.scss";
 
 .main-nav {
   font-style: normal;
@@ -8,10 +8,15 @@
 .main-nav__menu-open {
   font-size: 0;
   line-height: 0;
+  float: right;
+}
+
+.main-nav__list {
+  @include mixins.list-reset;
 }
 
 .main-nav__link {
-  @include mixins.link(var(--black-color));
+  @include mixins.link();
 }
 
 .main-nav__ico {

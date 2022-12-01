@@ -1,0 +1,5 @@
+@use "../mixins.scss";
+
+.product-card__list {
+  @include mixins.list-reset;
+}

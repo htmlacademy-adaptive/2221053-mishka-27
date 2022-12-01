@@ -1,5 +1,11 @@
-@mixin link($color) {
+@mixin link($color: var(--blac-color)) {
   display: block;
   color: $color;
   text-decoration: none;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }

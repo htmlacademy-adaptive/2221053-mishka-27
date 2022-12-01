@@ -1,0 +1,10 @@
+@use "../mixins.scss";
+
+.contacts__button {
+  @include mixins.link;
+}
+
+.contacts__list {
+  font-size: 14px;
+  line-height: 30px;
+}

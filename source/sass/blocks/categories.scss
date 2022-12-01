@@ -1,9 +1,11 @@
-@use "../../mixins";
+@use "../mixins";
 
 .categories {
   font-weight: 700;
   font-size: 19px;
   line-height: 24px;
+
+  @include mixins.list-reset;
 }
 
 .categories__item {
