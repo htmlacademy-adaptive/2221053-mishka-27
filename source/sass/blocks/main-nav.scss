@@ -3,16 +3,29 @@
 .main-nav {
   font-style: normal;
   font-weight: 700;
+
+  &--desctop {
+    display: none;
+  }
 }
 
-.main-nav__menu-open {
-  font-size: 0;
-  line-height: 0;
-  float: right;
+@media (min-width: 678px) {
+  .main-nav {
+    display: flex;
+    gap: 10px;
+
+    &--desctop {
+      display: none;
+    }
+  }
 }
 
-.main-nav__list {
-  @include mixins.list-reset;
+@media (min-width: 1060px) {
+  .main-nav {
+    &--desctop {
+      display: flex;
+    }
+  }
 }
 
 .main-nav__link {
