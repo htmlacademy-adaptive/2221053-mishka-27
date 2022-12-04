@@ -8,10 +8,31 @@
   font-weight: 400;
   font-style: normal;
   line-height: 24px;
+  height: 100%;
 
-  min-width: var(--content-width) + 10px;
+  min-width: calc(var(--content-width) + 10px);
   margin: 0;
 
   color: var(--black-color);
   background: var(--white-color);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1060px) {
+  .page__body {
+    width: var(--content-width);
+    margin: 0 auto;
+  }
+}
+
+.page__main-index {
+  flex: 1 0;
+}
+
+@media (min-width: 1060px) {
+  .page__main-index {
+    display: grid;
+    grid-template-columns: 166px 1fr;
+  }
 }

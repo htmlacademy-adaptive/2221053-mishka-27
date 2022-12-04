@@ -1,4 +1,4 @@
-@mixin link($color: var(--blac-color)) {
+@mixin link($color: var(--black-color)) {
   display: block;
   color: $color;
   text-decoration: none;
