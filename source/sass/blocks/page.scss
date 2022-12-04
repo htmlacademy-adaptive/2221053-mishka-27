@@ -8,7 +8,7 @@
   font-weight: 400;
   font-style: normal;
   line-height: 24px;
-  height: 100%;
+  min-height: 100%;
 
   min-width: calc(var(--content-width) + 10px);
   margin: 0;
@@ -28,11 +28,23 @@
 
 .page__main-index {
   flex: 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-@media (min-width: 1060px) {
-  .page__main-index {
-    display: grid;
-    grid-template-columns: 166px 1fr;
+.page__modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(216, 226, 75);
+
+  &--hidden {
+    display: none;
   }
 }

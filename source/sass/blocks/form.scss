@@ -26,6 +26,8 @@
 
 .form__list {
   @include mixins.list-reset;
+  display: flex;
+  justify-content: center;
 }
 
 .form__label {

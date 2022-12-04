@@ -8,10 +8,10 @@
   </head>
   <body class="page__body">
     <header class="main-header">
-      <a class="main-header__logo">Логотип</a>
+      <a class="main-header__logo" href="index.html">Логотип</a>
       <button class="main-header__menu-open main-header__menu-open" href="#">Открыть меню</button>
       <nav class="main-header__main-nav main-nav">
-        <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
+        <a class="main-nav__link">Каталог товаров</a>
         <a class="main-nav__link" href="form.html">Вязание на заказ</a>
       </nav>
       <nav class="main-header__user-menu main-nav">
@@ -69,44 +69,49 @@
       </article>
     </main>
     <footer class="main-footer">
-      <div class="main-footer__social social">
-        <a class="social__link social__link--vkontakte" href="#">Вконтакте</a>
-        <a class="social__link social__link--youtube" href="#">Ютуб</a>
-        <a class="social__link social__link--telegram" href="#">Телеграм</a>
-      </div>
-      <div class="main-footer__copyright copyright">
-        <b class="copyright__text">Разработано:</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <div class="main-footer__wrap">
+        <a class="main-footer__logo" href="#">Наш логотип</a>
+        <div class="main-footer__social social">
+          <a class="social__link social__link--vkontakte" href="#">Вконтакте</a>
+          <a class="social__link social__link--youtube" href="#">Ютуб</a>
+          <a class="social__link social__link--telegram" href="#">Телеграм</a>
+        </div>
+        <div class="main-footer__copyright copyright">
+          <b class="copyright__text">Разработано:</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        </div>
       </div>
     </footer>
-    <article class="add-product-basket">
-      <h2 class="section-title">Добавить в корзину</h2>
-      <form class="form" action="#" method="GET">
-        <fieldset class="form__fieldset form__fieldset--none">
-          <legend class="form__legend form__legend form__legend--modal">Выберите размер:</legend>
-          <ul class="form__list">
-            <li class="form__item">
-              <label class="form__label form__label--modal">
-                <input class="form__checkbox" type="checkbox" checked>
-                S
-              </label>
-            </li>
-            <li class="form__item">
-              <label class="form__label form__label--modal">
-                <input class="form__checkbox" type="checkbox">
-                M
-              </label>
-            </li>
-            <li class="form__item">
-              <label class="form__label form__label--modal">
-                <input class="form__checkbox" type="checkbox">
-                L
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <button class="button button--green" type="submit">Добавить</button>
-      </form>
-    </article>
+    <div class="page__modal page__modal--hidden">
+      <article class="add-product-basket">
+        <h2 class="section-title">Добавить в корзину</h2>
+        <form class="form" action="#" method="GET">
+          <fieldset class="form__fieldset form__fieldset--none">
+            <legend class="form__legend form__legend form__legend--modal">Выберите размер:</legend>
+            <ul class="form__list">
+              <li class="form__item">
+                <label class="form__label form__label--modal">
+                  <input class="form__checkbox" type="checkbox" checked>
+                  S
+                </label>
+              </li>
+              <li class="form__item">
+                <label class="form__label form__label--modal">
+                  <input class="form__checkbox" type="checkbox">
+                  M
+                </label>
+              </li>
+              <li class="form__item">
+                <label class="form__label form__label--modal">
+                  <input class="form__checkbox" type="checkbox">
+                  L
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="button button--green" type="submit">Добавить</button>
+        </form>
+      </article>
+    </div>
   </body>
 </html>
