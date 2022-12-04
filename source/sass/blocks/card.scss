@@ -1,15 +1,41 @@
+.card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "photo photo" "title title" "description description" "price button";
+}
+
+@media (min-width: 678px) and (max-width: 1059px) {
+  .card {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "photo title title" "photo description description" "photo price button";
+  }
+}
+
+.card__photo {
+  grid-area: photo;
+}
+
 .card__product-name {
   font-size: 17px;
   line-height: 24px;
+  grid-area: title;
 }
 
 .card__description {
   font-size: 13px;
   line-height: 30px;
   color: var(--light-black);
+  grid-area: description;
 }
 
 .card__price {
   font-weight: 700;
   font-size: 15px;
+  grid-area: price;
+}
+
+.card__button {
+  grid-area: button;
 }
