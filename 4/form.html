@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <title>HTML Academy: Мишка</title>
+    <base href="https://htmlacademy-adaptive.github.io/2221053-mishka-27/4/">
+</head>
+  <body class="page__body">
+    <header class="main-header">
+      <a class="main-header__logo" href="index.html">Логотип</a>
+      <button class="main-header__menu-open main-header__menu-open">Открыть меню</button>
+      <nav class="main-header__main-nav main-nav">
+        <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
+        <a class="main-nav__link">Вязание на заказ</a>
+      </nav>
+      <nav class="main-header__user-menu main-nav">
+        <a class="main-nav__link main-nav__link--ico-search" href="#">
+          <span>Поиск по сайту</span>
+        </a>
+        <a class="main-nav__link main-nav__link--ico--basket" href="#">
+          <span>Корзина: пока пуста</span>
+        </a>
+      </nav>
+      <p class="main-header__tablet">Бесплатная доставка по России</p>
+      <nav class="main-header__desctop main-nav main-nav--desctop">
+        <a class="main-nav__link" href="#">Новые поступления</a>
+        <a class="main-nav__link" href="#">Распродажа</a>
+      </nav>
+    </header>
+    <main class="main-page">
+      <div class="hero">
+        <h1 class="hero__page-title page-title">Вязание на заказ</h1>
+      </div>
+      <p class="main-page__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <form class="form form--grid" action="#" method="get">
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">ТИП</legend>
+          <div class="form__item-wrap form__item-wrap--flex">
+            <label class="form__label">Аксессуар для интерьера
+              <input class="form__radio" type="radio" name="accessories" id="accessories" checked>
+            </label>
+            <label class="form__label">Детская игрушка
+              <input class="form__radio" type="radio" name="toy" id="toy">
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">ЦВет</legend>
+          <div class="form__item-wrap form__item-wrap--grid">
+            <label class="form__label">Белый
+            <input class="form__check" type="checkbox" name="white" id="white">
+            </label>
+            <label class="form__label">Серый
+              <input class="form__check" type="checkbox" name="gray" id="gray">
+            </label>
+            <label class="form__label">Тиффани
+              <input class="form__check" type="checkbox" name="tiffany" id="tiffany">
+            </label>
+            <label class="form__label">Черный
+              <input class="form__check" type="checkbox" name="black" id="black">
+            </label>
+            <label class="form__label">Розовый
+              <input class="form__check" type="checkbox" name="pink" id="pink">
+            </label>
+            <label class="form__label">Оранжевый
+              <input class="form__check" type="checkbox" name="orange" id="orange">
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">ФИО</legend>
+          <div class="form__item-wrap form__item-wrap--flex">
+            <label class="form__label form__label--edit">Имя:
+              <input class="form__edit" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
+            </label>
+            <label class="form__label form__label--edit">Фамилия:
+              <input class="form__edit" type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required>
+            </label>
+            <label class="form__label form__label--edit">Отчество:
+              <input class="form__edit" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">тел</legend>
+          <input class="form__edit form__item-wrap" type="text" name="phone-number" id="phone-number" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+        </fieldset>
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">E-mail</legend>
+          <input class="form__edit form__item-wrap" type="text" name="mail" id="mail" placeholder="Ваш Email*" required>
+        </fieldset>
+        <fieldset class="form__fieldset">
+          <legend class="form__legend">Доп</legend>
+          <textarea class="form__edit form__item-wrap" name="additionally" id="additionally" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+        </fieldset>
+        <submit class="form__button" >ОТПРАВИТЬ ЗАКАЗ</submit>
+        <p class="form__fooutnote">*Поля обязательны для заполнения</p>
+      </form>
+    </main>
+    <footer class="main-footer">
+      <div class="main-footer__wrap">
+        <a class="main-footer__logo" href="#">Наш логотип</a>
+        <div class="main-footer__social social">
+          <a class="social__link social__link--vkontakte" href="#">Вконтакте</a>
+          <a class="social__link social__link--youtube" href="#">Ютуб</a>
+          <a class="social__link social__link--telegram" href="#">Телеграм</a>
+        </div>
+        <div class="main-footer__copyright copyright">
+          <b class="copyright__text">Разработано:</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
