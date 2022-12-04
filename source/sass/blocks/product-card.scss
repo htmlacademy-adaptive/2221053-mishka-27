@@ -1,0 +1,27 @@
+@use "../mixins.scss";
+
+.product-card {
+  width: var(--content-width);
+  margin: 0 auto;
+}
+
+.product-card__list {
+  @include mixins.list-reset;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+@media (min-width: 678px) {
+  .product-card__list {
+    gap: 54px;
+  }
+}
+
+@media (min-width: 1060px) {
+  .product-card__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

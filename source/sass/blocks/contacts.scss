@@ -1,0 +1,65 @@
+@use "../mixins.scss";
+
+@media (min-width: 1060px) {
+  .contacts {
+    display: grid;
+    grid-template-columns: 461px 527px;
+    margin-left: auto;
+    max-width: 988px;
+  }
+}
+
+.contacts__wrap {
+  width: var(--content-width);
+  margin: 0 auto;
+  max-width: 461px;
+}
+
+@media (min-width: 1060px) {
+  .contacts__wrap {
+    max-width: 461px;
+  }
+}
+
+.contacts__button {
+  @include mixins.link;
+  width: var(--content-width);
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.contacts__list {
+  font-size: 14px;
+  line-height: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 678px) {
+  .contacts__list {
+    font-size: 17px;
+    grid-template-columns: 1fr 2fr 1fr 2fr;
+    gap: 10px;
+  }
+}
+
+@media (min-width: 1060px) {
+  .contacts__list {
+    font-size: 14px;
+    line-height: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contacts__value {
+  margin: 0;
+}
+
+@media (min-width: 1060px) {
+  .contacts__map {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+  }
+}

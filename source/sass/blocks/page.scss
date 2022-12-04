@@ -1,39 +1,3 @@
-@font-face {
-  font-family: "Opensans";
-  font-weight: 400;
-  font-style: normal;
-
-  src: url("/source/fonts/opensans.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Opensans";
-  font-weight: 700;
-  font-style: normal;
-
-  src: url("/source/fonts/opensansbold.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Opensans";
-  font-weight: 700;
-  font-style: normal;
-
-  src: url("/source/fonts/opensansbold.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Opensans";
-  font-weight: 400;
-  font-style: normal;
-
-  src: url("/source/fonts/opensans.woff") format("woff");
-  font-display: swap;
-}
-
 .page {
   height: 100%;
 }
@@ -44,10 +8,44 @@
   font-weight: 400;
   font-style: normal;
   line-height: 24px;
+  min-height: 100%;
 
-  min-width: var(--content-width) + 10px;
+  min-width: calc(var(--content-width) + 10px);
   margin: 0;
 
   color: var(--black-color);
   background: var(--white-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 1060px) {
+  .page__body {
+    width: var(--content-width);
+    margin: 0 auto;
+  }
+}
+
+.page__main-index {
+  flex: 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page__modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(216, 226, 75);
+
+  &--hidden {
+    display: none;
+  }
 }

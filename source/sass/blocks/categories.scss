@@ -1,0 +1,46 @@
+@use "../mixins";
+
+.categories {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+
+  @include mixins.list-reset;
+  margin: 0 auto;
+}
+
+@media (min-width: 678px) {
+  .categories {
+    font-size: 20px;
+    line-height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    width: var(--content-width);
+  }
+}
+
+.categories__item {
+  background-color: var(--light-green);
+
+  &--dark {
+    background-color: var(--dark-green);
+  }
+}
+
+.categories__link {
+  @include mixins.link(var(--white-color));
+  padding-top: 24px;
+  padding-bottom: 31px;
+  padding-left: calc((100vw - var(--content-width)) / 2);
+  padding-right: calc((100vw - var(--content-width)) / 2);
+  width: var(--content-width);
+}
+
+@media (min-width: 678px) {
+  .categories__link {
+    box-sizing: border-box;
+    width: calc(var(--content-width) / 2);
+    padding: 0;
+    padding-left: 36px;
+  }
+}

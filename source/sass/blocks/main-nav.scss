@@ -1,0 +1,38 @@
+@use "../mixins.scss";
+
+.main-nav {
+  font-style: normal;
+  font-weight: 700;
+
+  &--desctop {
+    display: none;
+  }
+}
+
+@media (min-width: 678px) {
+  .main-nav {
+    display: flex;
+    gap: 10px;
+
+    &--desctop {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1060px) {
+  .main-nav {
+    &--desctop {
+      display: flex;
+    }
+  }
+}
+
+.main-nav__link {
+  @include mixins.link();
+}
+
+.main-nav__ico {
+  mix-blend-mode: normal;
+  opacity: 0.2;
+}

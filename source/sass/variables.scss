@@ -3,6 +3,22 @@
   --dark-green: #56c3b2;
   --black-color: #000000;
   --white-color: #ffffff;
+  --light-black: #444444;
+  --form-color: #62d1ba;
 
+  --tablet-width: 678px;
+  --desctop-width: 1060px;
   --content-width: 260px;
+}
+
+@media (min-width: 678px) {
+  :root {
+    --content-width: 668px;
+  }
+}
+
+@media (min-width: 1060px) {
+  :root {
+    --content-width: 1050px;
+  }
 }
