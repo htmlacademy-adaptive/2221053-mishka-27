@@ -8,11 +8,11 @@
   </head>
   <body class="page__body">
     <header class="main-header">
-      <a class="main-header__logo">Логотип</a>
-      <button class="main-header__menu-open main-header__menu-open" href="#">Открыть меню</button>
+      <a class="main-header__logo" href="index.html">Логотип</a>
+      <button class="main-header__menu-open main-header__menu-open">Открыть меню</button>
       <nav class="main-header__main-nav main-nav">
         <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
-        <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+        <a class="main-nav__link">Вязание на заказ</a>
       </nav>
       <nav class="main-header__user-menu main-nav">
         <a class="main-nav__link main-nav__link--ico-search" href="#">
@@ -33,60 +33,69 @@
         <h1 class="hero__page-title page-title">Вязание на заказ</h1>
       </div>
       <p class="main-page__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-      <form class="form" action="#" method="get">
+      <form class="form form--grid" action="#" method="get">
         <fieldset class="form__fieldset">
           <legend class="form__legend">ТИП</legend>
-          <label class="form__label">Аксессуар для интерьера
-            <input class="form__radio block-hidden" type="radio" name="accessories" id="accessories">
-          </label>
-          <label class="form__label">Детская игрушка
-            <input class="form__radio block-hidden" type="radio" name="toy" id="toy">
-          </label>
+          <div class="form__item-wrap form__item-wrap--flex">
+            <label class="form__label">Аксессуар для интерьера
+              <input class="form__radio" type="radio" name="accessories" id="accessories" checked>
+            </label>
+            <label class="form__label">Детская игрушка
+              <input class="form__radio" type="radio" name="toy" id="toy">
+            </label>
+          </div>
         </fieldset>
         <fieldset class="form__fieldset">
           <legend class="form__legend">ЦВет</legend>
-          <label class="form__label">Белый
+          <div class="form__item-wrap form__item-wrap--grid">
+            <label class="form__label">Белый
             <input class="form__check" type="checkbox" name="white" id="white">
-          </label>
-          <label class="form__label">Серый
-            <input class="form__check" type="checkbox" name="gray" id="gray">
-          </label>
-          <label class="form__label">Тиффани
-            <input class="form__check" type="checkbox" name="tiffany" id="tiffany">
-          </label>
-          <label class="form__label">Черный
-            <input class="form__check" type="checkbox" name="black" id="black">
-          </label>
-          <label class="form__label">Розовый
-            <input class="form__check" type="checkbox" name="pink" id="pink">
-          </label>
-          <label class="form__label">Оранжевый
-            <input class="form__check" type="checkbox" name="orange" id="orange">
-          </label>
+            </label>
+            <label class="form__label">Серый
+              <input class="form__check" type="checkbox" name="gray" id="gray">
+            </label>
+            <label class="form__label">Тиффани
+              <input class="form__check" type="checkbox" name="tiffany" id="tiffany">
+            </label>
+            <label class="form__label">Черный
+              <input class="form__check" type="checkbox" name="black" id="black">
+            </label>
+            <label class="form__label">Розовый
+              <input class="form__check" type="checkbox" name="pink" id="pink">
+            </label>
+            <label class="form__label">Оранжевый
+              <input class="form__check" type="checkbox" name="orange" id="orange">
+            </label>
+          </div>
         </fieldset>
         <fieldset class="form__fieldset">
           <legend class="form__legend">ФИО</legend>
-          <label class="form__label">Имя:</label>
-          <input class="form__edit" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
-          <label class="form__label">Фамилия:</label>
-          <input class="form__edit" type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required>
-          <label class="form__label">Отчество:</label>
-          <input class="form__edit" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+          <div class="form__item-wrap form__item-wrap--flex">
+            <label class="form__label form__label--edit">Имя:
+              <input class="form__edit" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
+            </label>
+            <label class="form__label form__label--edit">Фамилия:
+              <input class="form__edit" type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required>
+            </label>
+            <label class="form__label form__label--edit">Отчество:
+              <input class="form__edit" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+            </label>
+          </div>
         </fieldset>
         <fieldset class="form__fieldset">
           <legend class="form__legend">тел</legend>
-          <input class="form__edit" type="text" name="phone-number" id="phone-number" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+          <input class="form__edit form__item-wrap" type="text" name="phone-number" id="phone-number" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
         </fieldset>
         <fieldset class="form__fieldset">
           <legend class="form__legend">E-mail</legend>
-          <input class="form__edit" type="text" name="mail" id="mail" placeholder="Ваш Email*" required>
+          <input class="form__edit form__item-wrap" type="text" name="mail" id="mail" placeholder="Ваш Email*" required>
         </fieldset>
         <fieldset class="form__fieldset">
           <legend class="form__legend">Доп</legend>
-          <textarea class="form__edit" name="additionally" id="additionally" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          <textarea class="form__edit form__item-wrap" name="additionally" id="additionally" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>
-        <p class="fooutnote">*Поля обязательны для заполнения</p>
-        <input class="button" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
+        <submit class="form__button" >ОТПРАВИТЬ ЗАКАЗ</submit>
+        <p class="form__fooutnote">*Поля обязательны для заполнения</p>
       </form>
     </main>
     <footer class="main-footer">
