@@ -3,28 +3,22 @@
   box-shadow: 0 1px 0 #ececec, inset 0 1 0 #ececec;
   width: var(--content-width);
   margin: 0 auto;
-}
 
-@media (min-width: 678px) {
-  .main-header {
+  @media #{$media-t} {
     display: grid;
     grid-template-areas: "logo user-menu user-menu" "main-nav main-nax tablet";
     column-gap: 20px;
   }
-}
 
-@media (min-width: 1060px) {
-  .main-header {
+  @media #{$media-d} {
     grid-template-areas: "main-nav logo user-menu" "desctop desctop tablet";
   }
 }
 
 .main-header__logo {
   margin-left: 100px;
-}
 
-@media (min-width: 678px) {
-  .main-header__logo {
+  @media #{$media-t} {
     grid-area: logo;
   }
 }
@@ -33,47 +27,41 @@
   font-size: 0;
   line-height: 0;
   float: right;
-}
 
-@media (min-width: 678px) {
-  .main-header__menu-open {
+  @media #{$media-t} {
     display: none;
   }
 }
 
-@media (min-width: 678px) {
-  .main-header__main-nav {
+.main-header__main-nav {
+  @media #{$media-t} {
     grid-area: main-nav;
     font-size: 15px;
   }
-}
 
-@media (min-width: 1060px) {
-  .main-header__main-nav {
+  @media #{$media-d} {
     font-size: 17px;
   }
 }
 
-@media (min-width: 678px) {
-  .main-header__user-menu {
+.main-header__user-menu {
+  @media #{$media-t} {
     grid-area: user-menu;
   }
 }
 
 .main-header__tablet {
   display: none;
-}
 
-@media (min-width: 678px) {
-  .main-header__tablet {
+  @media #{$media-t} {
     grid-area: tablet;
     display: block;
     font-size: 15px;
   }
 }
 
-@media (min-width: 1060px) {
-  .main-header__desctop {
+.main-header__desctop {
+  @media #{$media-d} {
     grid-area: desctop;
   }
 }

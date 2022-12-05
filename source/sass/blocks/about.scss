@@ -7,17 +7,17 @@
 
 .about__list {
   @include mixins.list-reset;
-}
 
-@media (min-width: 678px) {
-  .about__list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+  @media #{$media-t} {
+    .about__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
 
-@media (min-width: 678px) {
-  .about__item {
+.about__item {
+  @media (min-width: 678px) {
     &:nth-child(1) {
       order: -5;
     }
@@ -43,10 +43,8 @@
 .about__text {
   font-weight: 700;
   line-height: 20px;
-}
 
-@media (min-width: 678px) {
-  .about__text {
+  @media #{$media-t} {
     font-size: 20px;
     line-height: 22px;
   }

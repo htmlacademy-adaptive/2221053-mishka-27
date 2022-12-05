@@ -6,17 +6,13 @@
   margin: 0 auto;
   text-align: center;
   max-width: 620px;
-}
 
-@media (min-width: 678px) {
-  .page-title {
+  @media #{$media-t} {
     font-size: 43px;
     line-height: 50px;
   }
-}
 
-@media (min-width: 1060px) {
-  .page-title {
+  @media #{$media-d} {
     font-size: 53px;
     line-height: 57px;
   }

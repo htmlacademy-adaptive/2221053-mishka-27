@@ -4,25 +4,15 @@
   font-style: normal;
   font-weight: 700;
 
-  &--desctop {
-    display: none;
-  }
-}
-
-@media (min-width: 678px) {
-  .main-nav {
+  @media #{$media-t} {
     display: flex;
     gap: 10px;
-
-    &--desctop {
-      display: none;
-    }
   }
-}
 
-@media (min-width: 1060px) {
-  .main-nav {
-    &--desctop {
+  &--desctop {
+    display: none;
+
+    @media #{$media-d} {
       display: flex;
     }
   }

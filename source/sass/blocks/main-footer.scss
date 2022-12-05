@@ -8,20 +8,16 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-}
 
-@media (min-width: 678px) {
-  .main-footer__wrap {
+  @media (min-width: 678px) {
     justify-content: space-between;
   }
 }
 
 .main-footer__logo {
   display: none;
-}
 
-@media (min-width: 678px) {
-  .main-footer__logo {
+  @media (min-width: 678px) {
     display: block;
   }
 }

@@ -1,0 +1,25 @@
+:root {
+  --light-green: #63d1bb;
+  --dark-green: #56c3b2;
+  --black-color: #000000;
+  --white-color: #ffffff;
+  --light-black: #444444;
+  --form-color: #62d1ba;
+}
+
+$mobile: 280px;
+$tablet: 708px;
+$desktop: 1060px;
+
+$media-t: screen and (min-width: $tablet);
+$media-d: screen and (min-width: $desktop);
+
+$content-width: 260px;
+
+@media #{$media-t} {
+  $content-width: 668px;
+}
+
+@media #{$media-d} {
+  $content-width: 1047px;
+}

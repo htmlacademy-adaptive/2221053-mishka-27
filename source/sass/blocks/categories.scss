@@ -7,10 +7,8 @@
 
   @include mixins.list-reset;
   margin: 0 auto;
-}
 
-@media (min-width: 678px) {
-  .categories {
+  @media #{$media-t} {
     font-size: 20px;
     line-height: 30px;
     display: flex;
@@ -34,10 +32,8 @@
   padding-left: calc((100vw - var(--content-width)) / 2);
   padding-right: calc((100vw - var(--content-width)) / 2);
   width: var(--content-width);
-}
 
-@media (min-width: 678px) {
-  .categories__link {
+  @media #{$media-t} {
     box-sizing: border-box;
     width: calc(var(--content-width) / 2);
     padding: 0;

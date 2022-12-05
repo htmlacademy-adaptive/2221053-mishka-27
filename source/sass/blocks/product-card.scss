@@ -10,16 +10,12 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
-}
 
-@media (min-width: 678px) {
-  .product-card__list {
+  @media #{$media-t} {
     gap: 54px;
   }
-}
 
-@media (min-width: 1060px) {
-  .product-card__list {
+  @media #{$media-d} {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
