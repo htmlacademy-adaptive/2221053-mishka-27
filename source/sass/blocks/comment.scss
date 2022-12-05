@@ -1,7 +1,7 @@
 @use "../mixins.scss";
 
 .comment {
-  width: var(--content-width);
+  width: $content-width;
   margin: 0 auto;
 
   @media #{$media-t} {

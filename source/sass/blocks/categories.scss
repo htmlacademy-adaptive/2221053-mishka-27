@@ -13,7 +13,7 @@
     line-height: 30px;
     display: flex;
     flex-wrap: wrap;
-    width: var(--content-width);
+    width: $content-width;
   }
 }
 
@@ -29,13 +29,13 @@
   @include mixins.link(var(--white-color));
   padding-top: 24px;
   padding-bottom: 31px;
-  padding-left: calc((100vw - var(--content-width)) / 2);
-  padding-right: calc((100vw - var(--content-width)) / 2);
-  width: var(--content-width);
+  padding-left: calc((100vw - $content-width) / 2);
+  padding-right: calc((100vw - $content-width) / 2);
+  width: $content-width;
 
   @media #{$media-t} {
     box-sizing: border-box;
-    width: calc(var(--content-width) / 2);
+    width: calc($content-width / 2);
     padding: 0;
     padding-left: 36px;
   }

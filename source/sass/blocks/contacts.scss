@@ -10,7 +10,7 @@
 }
 
 .contacts__wrap {
-  width: var(--content-width);
+  width: $content-width;
   margin: 0 auto;
   max-width: 461px;
 
@@ -21,7 +21,7 @@
 
 .contacts__button {
   @include mixins.link;
-  width: var(--content-width);
+  width: $content-width;
   margin: 0 auto;
   max-width: 400px;
 }

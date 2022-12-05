@@ -1,7 +1,7 @@
 .main-header {
   mix-blend-mode: normal;
   box-shadow: 0 1px 0 #ececec, inset 0 1 0 #ececec;
-  width: var(--content-width);
+  width: $content-width;
   margin: 0 auto;
 
   @media #{$media-t} {

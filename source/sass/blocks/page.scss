@@ -10,7 +10,7 @@
   line-height: 24px;
   min-height: 100%;
 
-  min-width: calc(var(--content-width) + 10px);
+  min-width: calc($content-width + 10px);
   margin: 0;
 
   color: var(--black-color);
@@ -20,7 +20,7 @@
   align-items: center;
 
   @media #{$media-d} {
-    width: var(--content-width);
+    width: $content-width;
     margin: 0 auto;
   }
 }

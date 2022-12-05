@@ -2,7 +2,7 @@
 
 .promo {
   color: var(--light-black);
-  width: var(--content-width);
+  width: $content-width;
   margin: 0 auto;
 
   @media #{$media-t} {
