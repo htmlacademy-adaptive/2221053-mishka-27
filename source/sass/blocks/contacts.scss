@@ -1,4 +1,4 @@
-@use "../mixins.scss";
+@use "../common/mixins";
 
 .contacts {
   @media (min-width: 1060px) {
@@ -10,9 +10,7 @@
 }
 
 .contacts__wrap {
-  width: $content-width;
-  margin: 0 auto;
-  max-width: 461px;
+  @include mixins.container;
 
   @media #{$media-d} {
     max-width: 461px;
@@ -20,10 +18,8 @@
 }
 
 .contacts__button {
+  @include mixins.container;
   @include mixins.link;
-  width: $content-width;
-  margin: 0 auto;
-  max-width: 400px;
 }
 
 .contacts__list {

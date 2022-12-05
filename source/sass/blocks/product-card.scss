@@ -1,8 +1,7 @@
-@use "../mixins.scss";
+@use "../common/mixins";
 
 .product-card {
-  width: $content-width;
-  margin: 0 auto;
+  @include mixins.container;
 }
 
 .product-card__list {

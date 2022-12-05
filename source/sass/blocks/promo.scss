@@ -1,9 +1,9 @@
-@use "../mixins.scss";
+@use "../common/mixins";
 
 .promo {
   color: var(--light-black);
-  width: $content-width;
-  margin: 0 auto;
+
+  @include mixins.container;
 
   @media #{$media-t} {
     display: grid;

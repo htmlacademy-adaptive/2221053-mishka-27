@@ -1,9 +1,11 @@
+@use "../common/mixins";
+
 .page-title {
   font-weight: 700;
   font-size: 27px;
   line-height: 30px;
-  width: $content-width;
-  margin: 0 auto;
+
+  @include mixins.container;
   text-align: center;
   max-width: 620px;
 

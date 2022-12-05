@@ -10,7 +10,7 @@
   list-style-type: none;
 }
 
-@mixin container($width) {
+@mixin container($width: $content-width) {
   margin-left: auto;
   margin-right: auto;
   width: $width;

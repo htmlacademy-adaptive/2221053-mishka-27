@@ -3,8 +3,7 @@
 }
 
 .main-footer__wrap {
-  width: $content-width;
-  margin: 0 auto;
+  @include mixins.container;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

@@ -1,8 +1,7 @@
-@use "../mixins.scss";
+@use "../common/mixins";
 
 .about {
-  width: $content-width;
-  margin: 0 auto;
+  @include mixins.container;
 }
 
 .about__list {

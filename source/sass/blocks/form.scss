@@ -1,8 +1,6 @@
-@use "../mixins";
+@use "../common/mixins";
 
 .form {
-  width: var(--content-width);
-
   &--grid {
     @media #{$media-t} {
       display: grid;

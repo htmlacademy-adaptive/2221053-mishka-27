@@ -1,4 +1,4 @@
-@use "../mixins";
+@use "../common/mixins";
 
 .categories {
   font-weight: 700;
@@ -6,7 +6,7 @@
   line-height: 24px;
 
   @include mixins.list-reset;
-  margin: 0 auto;
+  @include mixins.container;
 
   @media #{$media-t} {
     font-size: 20px;
