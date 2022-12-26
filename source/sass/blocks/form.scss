@@ -1,10 +1,11 @@
 @use "../common/mixins";
+@use "../common/variables" as *;
 
 .form {
   &--grid {
     @media #{$media-t} {
-      display: grid;
-      grid-template-columns: 200px auto 1fr;
+      display: flex;
+      flex-direction: column;
     }
   }
 }
@@ -16,12 +17,28 @@
 
   @media #{$media-t} {
     border: none;
-    display: contents;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     position: relative;
   }
 
-  &--none {
-    border-top: unset;
+  @media #{$media-d} {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  &--color {
+    @media #{$media-t} {
+      &::before {
+        content: "";
+        display: block;
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        left: calc((100% - 100vw) / 2);
+        background-color: var(--gray);
+        z-index: -1;
+      }
+    }
   }
 }
 
@@ -43,7 +60,12 @@
 .form__item-wrap {
   @media #{$media-t} {
     grid-column-start: 2;
-    grid-column-end: 4;
+    grid-column-end: 5;
+  }
+
+  @media #{$media-t} {
+    grid-column-start: 2;
+    grid-column-end: 7;
   }
 
   &--flex {
@@ -93,14 +115,37 @@
 
 .form__fooutnote {
   @media #{$media-t} {
-    grid-column-start: 3;
-    grid-column-end: 4;
+    text-align: right;
+    flex-grow: 1;
+  }
+
+  @media #{$media-d} {
+    grid-column: 4/7;
+  }
+}
+
+.form__button-wrap {
+  @media #{$media-t} {
+    display: flex;
+  }
+
+  @media #{$media-d} {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
   }
 }
 
 .form__button {
+  border: 2px solid var(--black-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   @media #{$media-t} {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    width: 230px;
+  }
+
+  @media #{$media-d} {
+    grid-column: 2/4;
   }
 }

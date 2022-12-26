@@ -1,7 +1,9 @@
 @use "../common/mixins";
+@use "../common/variables" as *;
 
 .page {
   height: 100%;
+  width: 100%;
 }
 
 .page__body {
@@ -12,18 +14,13 @@
   line-height: 24px;
   min-height: 100%;
 
-  min-width: calc($content-width + 10px);
+  width: 100%;
   margin: 0;
 
   color: var(--black-color);
   background: var(--white-color);
   display: flex;
   flex-direction: column;
-  align-items: center;
-
-  @media #{$media-d} {
-    @include mixins.container;
-  }
 }
 
 .page__main-index {
@@ -31,6 +28,20 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.page__container {
+  width: 260px;
+
+  @include mixins.container;
+
+  @media #{$media-t} {
+    width: 668px;
+  }
+
+  @media #{$media-d} {
+    width: 1047px;
+  }
 }
 
 .page__modal {

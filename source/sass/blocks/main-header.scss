@@ -1,4 +1,5 @@
 @use "../common/mixins";
+@use "../common/variables" as *;
 
 .main-header {
   mix-blend-mode: normal;
@@ -8,12 +9,12 @@
 
   @media #{$media-t} {
     display: grid;
-    grid-template-areas: "logo user-menu user-menu" "main-nav main-nax tablet";
-    column-gap: 20px;
+    grid-template-areas: "logo user-menu user-menu" "main-nav main-nav tablet";
+    margin: 0;
   }
 
   @media #{$media-d} {
-    grid-template-areas: "main-nav logo user-menu" "desctop desctop tablet";
+    grid-template-areas: "main-nav logo user-menu" "desktop desktop tablet";
   }
 }
 
@@ -22,6 +23,7 @@
 
   @media #{$media-t} {
     grid-area: logo;
+    margin-left: 20px;
   }
 }
 
@@ -39,16 +41,21 @@
   @media #{$media-t} {
     grid-area: main-nav;
     font-size: 15px;
+    background-color: var(--gray);
+    padding-left: 20px;
   }
 
   @media #{$media-d} {
     font-size: 17px;
+    background-color: transparent;
   }
 }
 
 .main-header__user-menu {
   @media #{$media-t} {
     grid-area: user-menu;
+    justify-self: end;
+    margin-right: 20px;
   }
 }
 
@@ -59,11 +66,16 @@
     grid-area: tablet;
     display: block;
     font-size: 15px;
+    background-color: var(--gray);
+    min-height: 100%;
+    margin: 0;
+    padding-right: 20px;
+    text-align: right;
   }
 }
 
-.main-header__desctop {
+.main-header__desktop {
   @media #{$media-d} {
-    grid-area: desctop;
+    grid-area: desktop;
   }
 }

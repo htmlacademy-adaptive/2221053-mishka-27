@@ -1,24 +1,32 @@
 @use "../common/mixins";
+@use "../common/variables" as *;
 
 .categories {
   font-weight: 700;
   font-size: 19px;
   line-height: 24px;
+  width: 100%;
 
   @include mixins.list-reset;
-  @include mixins.container;
 
   @media #{$media-t} {
     font-size: 20px;
     line-height: 30px;
     display: flex;
     flex-wrap: wrap;
-    width: $content-width;
+    justify-content: center;
+    width: 668px;
+    margin: 0 auto;
   }
 }
 
 .categories__item {
   background-color: var(--light-green);
+  padding: 0;
+
+  @media #{$media-t} {
+    width: 50%;
+  }
 
   &--dark {
     background-color: var(--dark-green);
@@ -35,8 +43,9 @@
 
   @media #{$media-t} {
     box-sizing: border-box;
-    width: calc($content-width / 2);
+    width: max-content;
     padding: 0;
     padding-left: 36px;
+    padding-right: 36px;
   }
 }

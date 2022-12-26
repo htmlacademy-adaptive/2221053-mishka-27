@@ -1,5 +1,7 @@
-@use "variables";
-@use "./fonts";
+@charset 'utf-8';
+@use "./common/variables";
+@use "./common/mixins";
+@use "./common/fonts";
 @use "./blocks/visully-hidden";
 @use "./blocks/page";
 @use "./blocks/button";

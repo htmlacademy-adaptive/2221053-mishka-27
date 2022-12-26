@@ -1,4 +1,5 @@
 @use "../common/mixins";
+@use "../common/variables" as *;
 
 .button {
   font-weight: 700;
@@ -6,6 +7,7 @@
   line-height: 20px;
   background: var(--white-color);
   border: 2px solid var(--light-black);
+  text-align: center;
 
   &--green {
     color: var(--white-color);

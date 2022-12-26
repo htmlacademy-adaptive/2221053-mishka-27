@@ -1,7 +1,8 @@
 @use "../common/mixins";
+@use "../common/variables" as *;
 
 .contacts {
-  @media (min-width: 1060px) {
+  @media (min-width: $desktop) {
     display: grid;
     grid-template-columns: 461px 527px;
     margin-left: auto;
@@ -20,6 +21,7 @@
 .contacts__button {
   @include mixins.container;
   @include mixins.link;
+  width: 230px;
 }
 
 .contacts__list {

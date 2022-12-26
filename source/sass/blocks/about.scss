@@ -1,4 +1,5 @@
 @use "../common/mixins";
+@use "../common/variables" as *;
 
 .about {
   @include mixins.container;
@@ -8,15 +9,13 @@
   @include mixins.list-reset;
 
   @media #{$media-t} {
-    .about__list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-    }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 .about__item {
-  @media (min-width: 678px) {
+  @media #{$media-t} {
     &:nth-child(1) {
       order: -5;
     }
