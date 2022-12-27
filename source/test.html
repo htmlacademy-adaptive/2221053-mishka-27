@@ -7,19 +7,35 @@
     <title>HTML Academy: Мишка</title>
   </head>
   <body class="page__body">
-    <section class="page__container comment">
-      <h2 class="section-title">Отзывы</h2>
-      <blockquote class="comment__quote">
-        <p class="comment__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также  набирают больше лайков!</p>
-        <cite class="comment__author">Анастасия Красильникова
-          <p class="comment__author-login">@misssssiskras</p>
-        </cite>
-      </blockquote>
-      <nav class="comment__nav">
-        <a class="comment__prev">Предыдущий отзыв</a>
-        <a class="comment__next">Следующий отзыв</a>
+    <header class="main-header main-header--nojs">
+      <a class="main-header__logo">Логотип</a>
+      <nav class="main-header__main-nav main-nav main-nav--opened">
+        <a class="main-nav__link" href="catalog.html">
+          <span>Каталог товаров</span>
+        </a>
+        <a class="main-nav__link main-nav__link--shadow" href="form.html">
+          <span>Вязание на заказ</span>
+        </a>
       </nav>
-      <a class="comment__button button button--color-white" href="#">Написать</a>
-    </section>
+      <nav class="main-header__user-menu main-nav main-nav--opened">
+        <a class="main-nav__link main-nav__link--ico main-nav__link--ico--search" href="#">
+          <span>Поиск по сайту</span>
+        </a>
+        <a class="main-nav__link main-nav__link--ico main-nav__link--ico--basket" href="#">
+          <span>Корзина: пока пуста</span>
+        </a>
+      </nav>
+      <button class="main-header__menu-open" type="button">Открыть меню</button>
+      <p class="main-header__tablet">Бесплатная доставка по России</p>
+      <nav class="main-header__desktop main-nav main-nav--desktop">
+        <a class="main-nav__link" href="#">
+          <span>Новые поступления</span>
+        </a>
+        <a class="main-nav__link" href="#">
+          <span>Распродажа</span>
+        </a>
+      </nav>
+    </header>
+    <script src="js/script.js"></script>
 </body>
   </html>

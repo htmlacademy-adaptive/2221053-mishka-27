@@ -7,25 +7,33 @@
     <title>HTML Academy: Мишка</title>
   </head>
   <body class="page__body">
-    <header class="main-header">
+    <header class="main-header main-header--nojs">
       <a class="main-header__logo">Логотип</a>
-      <button class="main-header__menu-open main-header__menu-open" href="#">Открыть меню</button>
-      <nav class="main-header__main-nav main-nav">
-        <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
-        <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+      <nav class="main-header__main-nav main-nav main-nav--opened">
+        <a class="main-nav__link" href="catalog.html">
+          <span>Каталог товаров</span>
+        </a>
+        <a class="main-nav__link main-nav__link--shadow" href="form.html">
+          <span>Вязание на заказ</span>
+        </a>
       </nav>
-      <nav class="main-header__user-menu main-nav">
-        <a class="main-nav__link main-nav__link--ico-search" href="#">
+      <nav class="main-header__user-menu main-nav main-nav--opened">
+        <a class="main-nav__link main-nav__link--ico main-nav__link--ico--search" href="#">
           <span>Поиск по сайту</span>
         </a>
-        <a class="main-nav__link main-nav__link--ico--basket" href="#">
+        <a class="main-nav__link main-nav__link--ico main-nav__link--ico--basket" href="#">
           <span>Корзина: пока пуста</span>
         </a>
       </nav>
+      <button class="main-header__menu-open" type="button">Открыть меню</button>
       <p class="main-header__tablet">Бесплатная доставка по России</p>
       <nav class="main-header__desktop main-nav main-nav--desktop">
-        <a class="main-nav__link" href="#">Новые поступления</a>
-        <a class="main-nav__link" href="#">Распродажа</a>
+        <a class="main-nav__link" href="#">
+          <span>Новые поступления</span>
+        </a>
+        <a class="main-nav__link" href="#">
+          <span>Распродажа</span>
+        </a>
       </nav>
     </header>
     <main class="main-page">

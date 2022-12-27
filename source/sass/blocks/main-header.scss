@@ -4,22 +4,34 @@
 .main-header {
   mix-blend-mode: normal;
   box-shadow: 0 1px 0 #ececec, inset 0 1 0 #ececec;
+  height: 79px;
 
   @include mixins.container;
 
   @media #{$media-t} {
+    height: auto;
+    font-size: 15px;
+    width: 668px;
     display: grid;
     grid-template-areas: "logo user-menu user-menu" "main-nav main-nav tablet";
-    margin: 0;
   }
 
   @media #{$media-d} {
+    font-size: 17px;
+    width: 1047px;
     grid-template-areas: "main-nav logo user-menu" "desktop desktop tablet";
+  }
+
+  &--nojs {
+    @media (max-width: $tablet) {
+      height: auto;
+    }
   }
 }
 
 .main-header__logo {
-  margin-left: 100px;
+  height: 79px;
+  display: block;
 
   @media #{$media-t} {
     grid-area: logo;
@@ -30,10 +42,26 @@
 .main-header__menu-open {
   font-size: 0;
   line-height: 0;
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 82px;
+  height: 79px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
 
   @media #{$media-t} {
     display: none;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -41,8 +69,6 @@
   @media #{$media-t} {
     grid-area: main-nav;
     font-size: 15px;
-    background-color: var(--gray);
-    padding-left: 20px;
   }
 
   @media #{$media-d} {
@@ -54,8 +80,7 @@
 .main-header__user-menu {
   @media #{$media-t} {
     grid-area: user-menu;
-    justify-self: end;
-    margin-right: 20px;
+    justify-content: flex-end;
   }
 }
 
@@ -64,13 +89,30 @@
 
   @media #{$media-t} {
     grid-area: tablet;
-    display: block;
+    display: flex;
     font-size: 15px;
     background-color: var(--gray);
     min-height: 100%;
     margin: 0;
-    padding-right: 20px;
-    text-align: right;
+    justify-content: flex-end;
+    position: relative;
+    align-items: center;
+  }
+
+  &::before {
+    content: "";
+    height: 100%;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    right: calc((668px - 100vw) / 2);
+    background-color: var(--gray);
+    z-index: -1;
+    box-shadow: 0 -1px 0 0 rgba(#000000, 0.1);
+
+    @media #{$media-d} {
+      right: calc((1047px - 100vw) / 2);
+    }
   }
 }
 

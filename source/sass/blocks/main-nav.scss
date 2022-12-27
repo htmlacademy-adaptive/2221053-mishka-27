@@ -4,26 +4,77 @@
 .main-nav {
   font-style: normal;
   font-weight: 700;
+  width: 100%;
+  display: none;
 
   @media #{$media-t} {
     display: flex;
-    gap: 10px;
   }
 
   &--desktop {
     display: none;
     background-color: var(--gray);
-    padding-left: 20px;
 
     @media #{$media-d} {
       display: flex;
       width: 100%;
+      font-size: 15px;
+    }
+  }
+
+  &--opened {
+    @media (max-width: $tablet) {
+      display: block;
     }
   }
 }
 
 .main-nav__link {
   @include mixins.link();
+  display: block;
+  width: 100vw;
+  padding: 28px 0 27px 76px;
+  box-sizing: border-box;
+
+  @media (max-width: $tablet) {
+    box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
+  }
+
+  @media #{$media-t} {
+    width: 167px;
+    padding-left: 0;
+    padding-top: 21px;
+  }
+
+  @media #{$media-d} {
+    width: 174px;
+  }
+
+  &--ico {
+    font-size: 17px;
+
+    @media #{$media-t} {
+      width: max-content;
+      padding-right: 0;
+      padding-top: 21px;
+      padding-left: 31px;
+      box-shadow: -1px 0 0 0 rgba(#000000, 0.1);
+    }
+  }
+
+  &--shadow {
+    @media #{$media-d} {
+      box-shadow: -1px 0 0 0 rgba(#000000, 0.1);
+    }
+  }
+
+  &:hover span {
+    opacity: 0.6;
+  }
+
+  &:active span {
+    opacity: 0.3;
+  }
 }
 
 .main-nav__ico {
