@@ -3,6 +3,7 @@
 .card {
   display: grid;
   grid-template-columns: 1fr auto;
+  gap: 33px;
   grid-template-areas: "photo photo" "title title" "description description" "price button";
 
   @media #{$media-t} and (max-width: $desktop) {

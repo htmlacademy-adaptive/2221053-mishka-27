@@ -2,9 +2,11 @@
 @use "../common/variables" as *;
 
 .main-header {
+  width: 100vw;
   mix-blend-mode: normal;
   box-shadow: 0 1px 0 #ececec, inset 0 1 0 #ececec;
   height: 79px;
+  z-index: 1;
 
   @include mixins.container;
 
@@ -30,8 +32,11 @@
 }
 
 .main-header__logo {
+  width: fit-content;
   height: 79px;
   display: block;
+  margin-left: auto;
+  margin-right: auto;
 
   @media #{$media-t} {
     grid-area: logo;
@@ -66,21 +71,26 @@
 }
 
 .main-header__main-nav {
+  background-color: var(--white-color);
+
   @media #{$media-t} {
     grid-area: main-nav;
     font-size: 15px;
+    background-color: transparent;
   }
 
   @media #{$media-d} {
     font-size: 17px;
-    background-color: transparent;
   }
 }
 
 .main-header__user-menu {
+  background-color: var(--white-color);
+
   @media #{$media-t} {
     grid-area: user-menu;
     justify-content: flex-end;
+    background-color: transparent;
   }
 }
 

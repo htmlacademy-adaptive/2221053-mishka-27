@@ -2,11 +2,11 @@
 @use "../common/variables" as *;
 
 .contacts {
-  @media (min-width: $desktop) {
+  @media #{$media-d} {
     display: grid;
-    grid-template-columns: 461px 527px;
-    margin-left: auto;
-    max-width: 988px;
+    grid-template-columns: auto 527px;
+    gap: 23px;
+    margin: 0 auto;
   }
 }
 
@@ -15,6 +15,8 @@
 
   @media #{$media-d} {
     max-width: 461px;
+    padding-left: 175px;
+    box-sizing: border-box;
   }
 }
 
@@ -40,17 +42,32 @@
     font-size: 14px;
     line-height: 30px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 72px auto;
   }
+}
+
+.contacts__name {
+  padding-right: 10px;
 }
 
 .contacts__value {
   margin: 0;
 
   @media #{$media-d} {
-    grid-column-start: 2;
-    grid-row-start: 1;
-    grid-row-end: 4;
+    width: 248px;
   }
 }
 
+.contacts__map {
+  width: 100vw;
+  display: block;
+  border: none;
+
+  @media #{$media-t} {
+    height: 457px;
+  }
+
+  @media #{$media-d} {
+    width: 527px;
+  }
+}

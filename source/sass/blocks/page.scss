@@ -42,6 +42,13 @@
   @media #{$media-d} {
     width: 1047px;
   }
+
+  &--padding {
+    @media #{$media-d} {
+      padding-left: 175px;
+      box-sizing: border-box;
+    }
+  }
 }
 
 .page__modal {

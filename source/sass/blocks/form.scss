@@ -11,9 +11,8 @@
 }
 
 .form__fieldset {
-  padding: 0;
+  padding: 50px 0;
   border: none;
-  border-top: 1px solid var(--form-color);
 
   @media #{$media-t} {
     border: none;
@@ -55,6 +54,23 @@
     line-height: 30px;
     color: var(--light-black);
   }
+
+  &--line {
+    @media (max-width: $tablet) {
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+      align-items: center;
+
+      &::after {
+        content: "";
+        display: block;
+        height: 1px;
+        flex-grow: 1;
+        background-color: var(--form-color);
+      }
+    }
+  }
 }
 
 .form__item-wrap {
@@ -72,6 +88,7 @@
     @media #{$media-t} {
       display: flex;
       flex-direction: column;
+      gap: 24px;
     }
   }
 
@@ -97,9 +114,15 @@
   font-weight: 700;
   line-height: 18px;
   display: flex;
+  flex-wrap: wrap;
 
   @media #{$media-t} {
     flex-direction: column;
+  }
+
+  @media #{$media-d} {
+    flex-direction: row;
+    gap: 25px;
   }
 
   &--modal {
@@ -110,7 +133,25 @@
 .form__edit {
   font-size: 17px;
   line-height: 18px;
+  background-color: transparent;
+  min-width: 260px;
   flex-grow: 1;
+  border: none;
+  box-shadow: inset 0 -2px 0 var(--black-color);
+  padding-top: 16px;
+  padding-bottom: 18px;
+
+  @media #{$media-t} {
+    padding-left: 17px;
+  }
+
+  &--multi {
+    box-shadow: none;
+    border: 2px solid  var(--light-black);
+    min-height: 142px;
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
 
 .form__fooutnote {

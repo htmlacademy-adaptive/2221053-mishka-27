@@ -43,7 +43,7 @@
       <p class="page__container main-page__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       <form class="page__container form form--grid" action="#" method="get">
         <div class="form__fieldset">
-          <h4 class="form__legend">ТИП</h4>
+          <h4 class="form__legend form__legend--line">ТИП</h4>
           <div class="form__item-wrap form__item-wrap--flex">
             <label class="form__label">Аксессуар для интерьера
               <input class="form__radio" type="radio" name="accessories" id="accessories" checked>
@@ -54,7 +54,7 @@
           </div>
         </div>
         <div class="form__fieldset form__fieldset--color">
-          <h4 class="form__legend">Цвет</h4>
+          <h4 class="form__legend form__legend--line">Цвет</h4>
           <div class="form__item-wrap form__item-wrap--grid">
             <label class="form__label">Белый
             <input class="form__check" type="checkbox" name="white" id="white">
@@ -77,7 +77,7 @@
           </div>
         </div>
         <div class="form__fieldset">
-          <h4 class="form__legend">ФИО</h4>
+          <h4 class="form__legend form__legend--line">ФИО</h4>
           <div class="form__item-wrap form__item-wrap--flex">
             <label class="form__label form__label--edit">Имя:
               <input class="form__edit" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
@@ -91,16 +91,16 @@
           </div>
         </div>
         <div class="form__fieldset form__fieldset--color">
-          <h4 class="form__legend">тел</h4>
+          <h4 class="form__legend form__legend--line">тел</h4>
           <input class="form__edit form__item-wrap" type="text" name="phone-number" id="phone-number" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
         </div>
         <div class="form__fieldset form__fieldset--color">
-          <h4 class="form__legend">E-mail</h4>
+          <h4 class="form__legend form__legend--line">E-mail</h4>
           <input class="form__edit form__item-wrap" type="text" name="mail" id="mail" placeholder="Ваш Email*" required>
         </div>
         <div class="form__fieldset">
-          <h4 class="form__legend">Доп</h4>
-          <textarea class="form__edit form__item-wrap" name="additionally" id="additionally" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          <h4 class="form__legend form__legend--line">Доп</h4>
+          <textarea class="form__edit form__edit--multi form__item-wrap" name="additionally" id="additionally" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </div>
         <div class="form__button-wrap">
           <submit class="form__button" >ОТПРАВИТЬ ЗАКАЗ</submit>
@@ -122,5 +122,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
