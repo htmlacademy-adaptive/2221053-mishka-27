@@ -7,32 +7,40 @@
     <title>HTML Academy: Мишка</title>
   </head>
   <body class="page__body">
-    <header class="main-header">
-      <a class="main-header__logo" href="index.html">Логотип</a>
-      <button class="main-header__menu-open main-header__menu-open" href="#">Открыть меню</button>
-      <nav class="main-header__main-nav main-nav">
-        <a class="main-nav__link">Каталог товаров</a>
-        <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+    <header class="main-header main-header--nojs">
+      <a class="main-header__logo">Логотип</a>
+      <nav class="main-header__main-nav main-nav main-nav--opened">
+        <a class="main-nav__link" href="catalog.html">
+          <span>Каталог товаров</span>
+        </a>
+        <a class="main-nav__link main-nav__link--shadow" href="form.html">
+          <span>Вязание на заказ</span>
+        </a>
       </nav>
-      <nav class="main-header__user-menu main-nav">
-        <a class="main-nav__link main-nav__link--ico-search" href="#">
+      <nav class="main-header__user-menu main-nav main-nav--opened">
+        <a class="main-nav__link main-nav__link--ico main-nav__link--ico--search" href="#">
           <span>Поиск по сайту</span>
         </a>
-        <a class="main-nav__link main-nav__link--ico--basket" href="#">
+        <a class="main-nav__link main-nav__link--ico main-nav__link--ico--basket" href="#">
           <span>Корзина: пока пуста</span>
         </a>
       </nav>
+      <button class="main-header__menu-open" type="button">Открыть меню</button>
       <p class="main-header__tablet">Бесплатная доставка по России</p>
-      <nav class="main-header__desctop main-nav main-nav--desctop">
-        <a class="main-nav__link" href="#">Новые поступления</a>
-        <a class="main-nav__link" href="#">Распродажа</a>
+      <nav class="main-header__desktop main-nav main-nav--desktop">
+        <a class="main-nav__link" href="#">
+          <span>Новые поступления</span>
+        </a>
+        <a class="main-nav__link" href="#">
+          <span>Распродажа</span>
+        </a>
       </nav>
     </header>
     <main class="main-page">
       <div class="hero">
         <h1 class="hero__page-title page-title">Каталог товаров</h1>
       </div>
-      <section class="product-card">
+      <section class="page__container product-card">
         <h2 class="visully-hidden">Список товаров категории.</h2>
         <ul class="product-card__list">
           <li class="card">
@@ -58,13 +66,13 @@
         </li>
         </ul>
       </section>
-        <article class="product-create">
+      <article class="product-create">
         <video class="product-create__video">
           <source src="">
         </video>
         <h1 class="product-create__title">Процесс производства</h1>
         <p class="product-create__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <a class="button">Сделать заказ</a>
+        <a class="product-create__button button">Сделать заказ</a>
       </article>
     </main>
     <footer class="main-footer">
@@ -82,10 +90,10 @@
       </div>
     </footer>
     <div class="page__modal page__modal--hidden">
-      <article class="add-product-basket">
+      <article class="page__container add-product-basket">
         <h2 class="section-title">Добавить в корзину</h2>
         <form class="form" action="#" method="GET">
-          <fieldset class="form__fieldset form__fieldset--none">
+          <fieldset class="form__fieldset">
             <legend class="form__legend form__legend form__legend--modal">Выберите размер:</legend>
             <ul class="form__list">
               <li class="form__item">
@@ -112,5 +120,6 @@
         </form>
       </article>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -7,25 +7,33 @@
     <title>HTML Academy: Мишка</title>
   </head>
   <body class="page__body">
-    <header class="main-header">
+    <header class="main-header main-header--nojs">
       <a class="main-header__logo">Логотип</a>
-      <button class="main-header__menu-open main-header__menu-open" href="#">Открыть меню</button>
-      <nav class="main-header__main-nav main-nav">
-        <a class="main-nav__link" href="catalog.html">Каталог товаров</a>
-        <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+      <nav class="main-header__main-nav main-nav main-nav--opened">
+        <a class="main-nav__link" href="catalog.html">
+          <span>Каталог товаров</span>
+        </a>
+        <a class="main-nav__link main-nav__link--shadow" href="form.html">
+          <span>Вязание на заказ</span>
+        </a>
       </nav>
-      <nav class="main-header__user-menu main-nav">
-        <a class="main-nav__link main-nav__link--ico-search" href="#">
+      <nav class="main-header__user-menu main-nav main-nav--opened">
+        <a class="main-nav__link main-nav__link--ico main-nav__link--ico--search" href="#">
           <span>Поиск по сайту</span>
         </a>
-        <a class="main-nav__link main-nav__link--ico--basket" href="#">
+        <a class="main-nav__link main-nav__link--ico main-nav__link--ico--basket" href="#">
           <span>Корзина: пока пуста</span>
         </a>
       </nav>
+      <button class="main-header__menu-open" type="button">Открыть меню</button>
       <p class="main-header__tablet">Бесплатная доставка по России</p>
-      <nav class="main-header__desctop main-nav main-nav--desctop">
-        <a class="main-nav__link" href="#">Новые поступления</a>
-        <a class="main-nav__link" href="#">Распродажа</a>
+      <nav class="main-header__desktop main-nav main-nav--desktop">
+        <a class="main-nav__link" href="#">
+          <span>Новые поступления</span>
+        </a>
+        <a class="main-nav__link" href="#">
+          <span>Распродажа</span>
+        </a>
       </nav>
     </header>
     <main class="page__main-index main-page">
@@ -42,7 +50,7 @@
           </li>
         </ul>
       </div>
-      <section class="promo">
+      <section class="page__container page__container--padding promo">
         <h2 class="promo__title section-title">Вязаные&nbsp;корзинки</h2>
         <p class="promo__type">ТОВАР НЕДЕЛИ</p>
         <p class="promo__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
@@ -58,7 +66,7 @@
         <p class="promo__price">Цена: 990 руб.</p>
         <a class="promo__button button button--color-white" href="#modal-order">ЗАКАЗАТЬ</a>
       </section>
-      <section class="about">
+      <section class="page__container page__container--padding about">
         <h2 class="section-title">Коротко о нас:</h2>
         <ul class="about__list">
           <li class="about__item"><p class="about__text">Экологически чистые материалы</p></li>
@@ -69,7 +77,7 @@
           <li class="about__item"><p class="about__text">Поставляется в подарочной упаковке</p></li>
       </ul>
       </section>
-      <section class="comment">
+      <section class="page__container comment">
         <h2 class="section-title">Отзывы</h2>
         <blockquote class="comment__quote">
           <p class="comment__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также  набирают больше лайков!</p>
@@ -83,17 +91,17 @@
         </nav>
         <a class="comment__button button button--color-white" href="#">Написать</a>
       </section>
-      <section class="contacts">
-        <div class="contacts__wrap">
+      <section class="contacts"> <!--Центрирование на десктопе работает неправильно-->
+        <div class="page__container page__container--padding contacts__wrap">
           <h2 class="section-title">Контакты</h2>
           <dl class="contacts__list">
             <dt class="contacts__name">e-mail:</dt>
             <dd class="contacts__value">info@mimimishkashop.ru</dd>
             <dt class="contacts__name">адрес:</dt>
-            <dd class="contacts__value">г. Санкт-Петербург ул. Большая Конюшенная д. 19/8, офис 101</dd>
+            <dd class="contacts__value">г. Санкт-Петербург <br>ул. Большая Конюшенная <br>д. 19/8, офис 101</dd>
           </dl>
         </div>
-        <img class="contacts__map" src="" alt="Наше местоположение на карте.">
+        <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.822607321338!2d30.317408900000004!3d59.968266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1672250245510!5m2!1sru!2sru" width="320" height="454" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Наше местоположение на карте."></iframe>
         <a class="contacts__button button button--color-white" href="#">Написать</a>
       </section>
     </main>
@@ -112,10 +120,10 @@
       </div>
     </footer>
     <div class="page__modal page__modal--hidden">
-      <article class="add-product-basket">
+      <article class="page__container add-product-basket">
         <h2 class="section-title">Добавить в корзину</h2>
         <form class="form" action="#" method="GET">
-          <fieldset class="form__fieldset form__fieldset--none">
+          <fieldset class="form__fieldset">
             <legend class="form__legend form__legend form__legend--modal">Выберите размер:</legend>
             <ul class="form__list">
               <li class="form__item">
@@ -142,5 +150,6 @@
         </form>
       </article>
     </div>
+    <script src="js/script.js"></script>
   </body>
 </html>

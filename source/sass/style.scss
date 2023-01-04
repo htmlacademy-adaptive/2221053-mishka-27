@@ -1,5 +1,7 @@
-@use "./fonts";
-@use "variables";
+@charset 'utf-8';
+@use "./common/variables";
+@use "./common/mixins";
+@use "./common/fonts";
 @use "./blocks/visully-hidden";
 @use "./blocks/page";
 @use "./blocks/button";
@@ -20,4 +22,39 @@
 @use "./blocks/product-card";
 @use "./blocks/card";
 @use "./blocks/product-create";
-@use "./blocks/add-product-basket"
+@use "./blocks/add-product-basket";
+
+.main-nav--closed + .main-header__menu-open::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 32px;
+  left: 31px;
+  width: 20px;
+  height: 2px;
+  background-color: #231f20;
+  box-shadow: 0 8px 0 0 #231f20, 0 16px 0 0 #231f20;
+}
+
+.main-nav--opened + .main-header__menu-open {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 36px;
+    left: 25px;
+    width: 28px;
+    height: 2px;
+    background-color: #231f20;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+    box-shadow: none;
+  }
+}

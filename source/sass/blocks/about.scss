@@ -1,23 +1,21 @@
-@use "../mixins.scss";
+@use "../common/mixins";
+@use "../common/variables" as *;
 
 .about {
-  width: var(--content-width);
-  margin: 0 auto;
+  @include mixins.container;
 }
 
 .about__list {
   @include mixins.list-reset;
-}
 
-@media (min-width: 678px) {
-  .about__list {
+  @media #{$media-t} {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 678px) {
-  .about__item {
+.about__item {
+  @media #{$media-t} {
     &:nth-child(1) {
       order: -5;
     }
@@ -43,10 +41,8 @@
 .about__text {
   font-weight: 700;
   line-height: 20px;
-}
 
-@media (min-width: 678px) {
-  .about__text {
+  @media #{$media-t} {
     font-size: 20px;
     line-height: 22px;
   }

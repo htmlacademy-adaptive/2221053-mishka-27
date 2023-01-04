@@ -1,29 +1,49 @@
-@use "../mixins";
+@use "../common/mixins";
+@use "../common/variables" as *;
 
 .categories {
   font-weight: 700;
   font-size: 19px;
   line-height: 24px;
+  width: 100%;
 
   @include mixins.list-reset;
-  margin: 0 auto;
-}
 
-@media (min-width: 678px) {
-  .categories {
+  @media #{$media-t} {
     font-size: 20px;
     line-height: 30px;
     display: flex;
     flex-wrap: wrap;
-    width: var(--content-width);
+    justify-content: center;
+    width: 668px;
+    margin: 0 auto;
+  }
+
+  @media #{$media-d} {
+    width: 1047px;
   }
 }
 
 .categories__item {
   background-color: var(--light-green);
+  padding: 0;
+
+  &:hover,
+  &:active {
+    background-color: #59d5bc;
+  }
+
+  @media #{$media-t} {
+    width: 50%;
+  }
 
   &--dark {
     background-color: var(--dark-green);
+
+    &:hover,
+    &:active {
+      background-color: #46c1ae;
+    }
   }
 }
 
@@ -31,16 +51,16 @@
   @include mixins.link(var(--white-color));
   padding-top: 24px;
   padding-bottom: 31px;
-  padding-left: calc((100vw - var(--content-width)) / 2);
-  padding-right: calc((100vw - var(--content-width)) / 2);
-  width: var(--content-width);
-}
+  display: flex;
+  gap: 60px;
+  justify-content: space-around;
 
-@media (min-width: 678px) {
-  .categories__link {
+  @media #{$media-t} {
     box-sizing: border-box;
-    width: calc(var(--content-width) / 2);
-    padding: 0;
-    padding-left: 36px;
+    gap: 72px;
+  }
+
+  @media #{$media-d} {
+    gap: 74px;
   }
 }

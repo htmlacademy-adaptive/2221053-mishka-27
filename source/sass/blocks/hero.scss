@@ -6,7 +6,8 @@
   &--img {
     background-image: url("/img/hero-mobile.png");
     background-repeat: no-repeat;
-    background-color: unset;
+    background-position: center top;
+    background-color: var(--gray);
   }
 }
 
