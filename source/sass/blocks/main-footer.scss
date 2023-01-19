@@ -9,10 +9,18 @@
   @include mixins.container;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 260px;
 
-  @media (min-width: 678px) {
+  @media #{$media-t} {
+    flex-direction: row;
     justify-content: space-between;
+    width: 668px;
+  }
+
+  @media #{$media-d} {
+    width: 1047px;
   }
 }
 

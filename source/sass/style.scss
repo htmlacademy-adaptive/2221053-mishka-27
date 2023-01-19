@@ -23,6 +23,7 @@
 @use "./blocks/card";
 @use "./blocks/product-create";
 @use "./blocks/add-product-basket";
+@use "./blocks/social";
 
 .main-nav--closed + .main-header__menu-open::before {
   content: "";

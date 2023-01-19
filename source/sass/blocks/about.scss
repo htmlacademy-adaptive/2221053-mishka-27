@@ -1,6 +1,15 @@
 @use "../common/mixins";
 @use "../common/variables" as *;
 
+@mixin about-mixin {
+  content: "";
+  display: block;
+  height: 38px;
+  min-width: 100%;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+
 .about {
   @include mixins.container;
 }
@@ -15,6 +24,10 @@
 }
 
 .about__item {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
   @media #{$media-t} {
     &:nth-child(1) {
       order: -5;
@@ -35,6 +48,42 @@
     &:nth-child(5) {
       order: -2;
     }
+  }
+
+  &--flower::before {
+    @include about-mixin();
+
+    background-image: url("../img/ico/flower.svg");
+  }
+
+  &--money::before {
+    @include about-mixin();
+
+    background-image: url("../img/ico/money.svg");
+  }
+
+  &--like::before {
+    @include about-mixin();
+
+    background-image: url("../img/ico/like.svg");
+  }
+
+  &--tangle::before {
+    @include about-mixin();
+
+    background-image: url("../img/ico/tangle.svg");
+  }
+
+  &--rocket::before {
+    @include about-mixin();
+
+    background-image: url("../img/ico/rocket.svg");
+  }
+
+  &--gift::before {
+    @include about-mixin();
+
+    background-image: url("../img/ico/gift.svg");
   }
 }
 

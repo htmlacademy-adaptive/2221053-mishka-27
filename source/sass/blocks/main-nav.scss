@@ -31,6 +31,8 @@
 
 .main-nav__link {
   @include mixins.link();
+
+  font-size: 17px;
   display: block;
   width: 100vw;
   padding: 28px 0 27px 76px;
@@ -50,21 +52,16 @@
     width: 174px;
   }
 
-  &--ico {
-    font-size: 17px;
-
-    @media #{$media-t} {
-      width: max-content;
-      padding-right: 0;
-      padding-top: 21px;
-      padding-left: 31px;
+  &--shadow {
+    @media #{$media-d} {
       box-shadow: -1px 0 0 0 rgba(#000000, 0.1);
     }
   }
 
-  &--shadow {
-    @media #{$media-d} {
-      box-shadow: -1px 0 0 0 rgba(#000000, 0.1);
+  &--search {
+    @media #{$media-t} {
+      font-size: 0;
+      width: 82px;
     }
   }
 
@@ -80,4 +77,26 @@
 .main-nav__ico {
   mix-blend-mode: normal;
   opacity: 0.2;
+  height: 18px;
+
+  @media #{$media-t} {
+    width: max-content;
+    padding-right: 0;
+    padding-top: 21px;
+    padding-left: 31px;
+    box-shadow: -1px 0 0 0 rgba(#000000, 0.1);
+    background-repeat: no-repeat;
+  }
+
+  &--search {
+    width: 18px;
+    margin-right: 26px;
+    margin-left: -46px;
+  }
+
+  &--basket {
+    width: 21px;
+    margin-right: 25px;
+    margin-left: -46px;
+  }
 }

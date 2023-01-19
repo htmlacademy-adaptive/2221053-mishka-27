@@ -8,6 +8,11 @@
     display: grid;
     grid-template-columns: 1fr auto;
   }
+
+  @media #{$media-d} {
+    padding-left: 175px;
+    width: 832px;
+  }
 }
 
 
@@ -46,10 +51,30 @@
 
 .comment__nav {
   display: flex;
+  gap: -1px;
 
   @media #{$media-t} {
     grid-row-start: 3;
     grid-column-start: 2;
+  }
+}
+
+.comment__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 52px;
+  gap: -1px;
+  box-sizing: border-box;
+  border: 1px solid #ececec;
+}
+
+.comment__nav-link {
+  width: 50px;
+
+  &--next {
+    transform: rotate(180deg);
   }
 }
 
