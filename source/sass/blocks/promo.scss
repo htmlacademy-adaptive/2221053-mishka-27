@@ -3,8 +3,8 @@
 
 .promo {
   color: var(--light-black);
-
-  @include mixins.container;
+  margin-top: 31px;
+  padding-bottom: 41px;
 
   @media #{$media-t} {
     display: grid;
@@ -17,11 +17,13 @@
     grid-template-columns: 100px 292px auto;
     grid-template-areas: "type title img" ". description img" ". parameter img" ". price img" ". button img";
     column-gap: 43px;
-    padding-left: 62px;
+    padding-left: 45px;
   }
 }
 
 .promo__title {
+  margin-bottom: 0;
+
   @media #{$media-t} {
     grid-area: title;
   }
@@ -36,6 +38,8 @@
 .promo__type {
   font-weight: 700;
   color: var(--light-green);
+  margin-top: 2px;
+  margin-bottom: 15px;
 
   @media #{$media-t} {
     grid-area: type;
@@ -44,6 +48,7 @@
 
 .promo__description {
   font-size: 15px;
+  margin-bottom: 0;
 
   @media #{$media-t} {
     font-size: 17px;
@@ -57,21 +62,37 @@
   line-height: 20px;
   display: grid;
   grid-template-columns: 97px 162px;
+  row-gap: 20px;
+  margin-top: 28px;
 
   @media #{$media-t} {
     grid-area: parameter;
   }
 }
 
+.promo__value {
+  margin-left: 0;
+}
+
 .promo__photo {
+  width: 260px;
+  display: block;
+  margin-top: 41px;
+
   @media #{$media-t} {
     grid-area: img;
+    width: 334px;
+  }
+
+  @media #{$media-d} {
+    width: 525px;
   }
 }
 
 .promo__price {
   font-weight: 700;
   text-align: center;
+  margin-top: 26px;
 
   @media #{$media-t} {
     font-size: 20px;
@@ -82,6 +103,10 @@
 .promo__button {
   @include mixins.link();
   text-align: center;
+  margin-top: 24px;
+  padding: 14px 0;
+  letter-spacing: 0.01em;
+  font-size: 18px;
 
   @media #{$media-t} {
     grid-area: button;

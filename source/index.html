@@ -209,62 +209,79 @@
       <div class="category-nav">
         <ul class="categories">
           <li class="categories__item">
-            <a class="categories__link" href="#">Предметы интерьера</a>
+            <a class="categories__link" href="#">
+              <div class="page__container categories__wrap categories__wrap--lamp">
+                <p class="categories__title">Предметы интерьера</p>
+              </div>
+            </a>
           </li>
           <li class="categories__item categories__item--dark">
-            <a class="categories__link categories__link" href="#">Детские игрушки</a>
+            <a class="categories__link categories__link" href="#">
+              <div class="page__container categories__wrap categories__wrap--toy">
+                <p class="categories__title">Детские игрушки</p>
+              </div>
+            </a>
           </li>
         </ul>
       </div>
-      <section class="page__container page__container--padding promo">
-        <h2 class="promo__title section-title">Вязаные&nbsp;корзинки</h2>
-        <p class="promo__type">ТОВАР НЕДЕЛИ</p>
-        <p class="promo__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
-        <dl class="promo__parameter">
-          <dh class="promo-parameter__name">Цвет:</dh>
-          <dd class="promo-parameter__value">Тиффани/серый</dd>
-          <dh class="promo-parameter__name">Диаметр</dh>
-          <dd class="promo-parameter__value">25 см</dd>
-          <dh class="promo-parameter__name">Высота</dh>
-          <dd class="promo-parameter__value">15см</dd>
-        </dl>
-        <img class="promo__photo" src="" alt="Фоотография товара." width="260px" height="315px">
-        <p class="promo__price">Цена: 990 руб.</p>
-        <a class="promo__button button button--color-white" href="#modal-order">ЗАКАЗАТЬ</a>
-      </section>
+      <div class="line-bottom">
+        <section class="page__container page__container--padding promo">
+          <h2 class="promo__title section-title">Вязаные&nbsp;корзинки</h2>
+          <p class="promo__type">ТОВАР НЕДЕЛИ</p>
+          <p class="promo__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
+          <dl class="promo__parameter">
+            <dh class="promo__name">Цвет:</dh>
+            <dd class="promo__value">Тиффани/серый</dd>
+            <dh class="promo__name">Диаметр</dh>
+            <dd class="promo__value">25 см</dd>
+            <dh class="promo__name">Высота</dh>
+            <dd class="promo__value">15см</dd>
+          </dl>
+          <picture class="promo__photo">
+            <source media="(min-width: 1060px)" srcset="img/triple-desktop.jpg, img/triple-desktop@2x.jpg">
+            <source media="(min-width: 708px)" srcset="img/triple-tablet.jpg, img/triple-tablet@2x.jpg">
+            <img class="promo__photo" src="img/triple-mobile.jpg" srcset="img/triple-mobile@2x.jpg" alt="Фоотография товара Вязаные корзинки.">
+          </picture>
+
+          <p class="promo__price">Цена: 990 руб.</p>
+          <a class="promo__button button button--color-white" href="#modal-order">ЗАКАЗАТЬ</a>
+        </section>
+      </div>
       <section class="page__container page__container--padding about">
-        <h2 class="section-title">Коротко о нас:</h2>
+        <h2 class="section-title about__title">Коротко о нас:</h2>
         <ul class="about__list">
-          <li class="about__item about__item--flower"><p class="about__text">Экологически чистые материалы</p></li>
-          <li class="about__item about__item--money"><p class="about__text">Скандинавский стиль по российской цене</p></li>
-          <li class="about__item about__item--like"><p class="about__text">Увеличивает лайки на фотографиях</p></li>
-          <li class="about__item about__item--tangle"><p class="about__text">Связано вручную с любовью и умилением</p></li>
+          <li class="about__item about__item--flower"><p class="about__text">Экологически<br>чистые материалы</p></li>
+          <li class="about__item about__item--money"><p class="about__text">Скандинавский стиль<br>по российской цене</p></li>
+          <li class="about__item about__item--like"><p class="about__text">Увеличивает лайки<br>на фотографиях</p></li>
+          <li class="about__item about__item--tangle"><p class="about__text">Связано вручную<br>с любовью и умилением</p></li>
           <li class="about__item about__item--rocket"><p class="about__text">Поддержка отечественного производителя</p></li>
-          <li class="about__item about__item--gift"><p class="about__text">Поставляется в подарочной упаковке</p></li>
+          <li class="about__item about__item--gift"><p class="about__text">Поставляется<br>в подарочной упаковке</p></li>
       </ul>
       </section>
-      <section class="page__container comment">
-        <h2 class="section-title">Отзывы</h2>
-        <blockquote class="comment__quote">
-          <p class="comment__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также  набирают больше лайков!</p>
-          <cite class="comment__author">Анастасия Красильникова
-            <p class="comment__author-login">@misssssiskras</p>
-          </cite>
-        </blockquote>
-        <nav class="comment__nav">
-          <a class="comment__link">
-            <svg class="comment__nav-link" role="img" aria-label="Предыдущий отзыв." focusable="false">
-              <use xlink:href="#arrow-ico"></use>
-            </svg>
-          </a>
-          <a class="comment__link">
-            <svg class="comment__nav-link comment__nav-link--next" role="img" aria-label="Следующий отзыв." focusable="false">
-              <use xlink:href="#arrow-ico"></use>
-            </svg>
-          </a>
-        </nav>
-        <a class="comment__button button button--color-white" href="#">Написать</a>
-      </section>
+      <div class="line-bottom">
+          <section class="page__container comment">
+          <h2 class="section-title--comment">Отзывы</h2>
+          <blockquote class="comment__quote">
+            <p class="comment__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как<br>у популярных инстамамочек.<br>В отчаянии, я накупила аксессуаров и игрушек в Мишке,<br>и мои фотографии сразу стали более стильными, а также  набирают больше лайков!</p>
+            <cite class="comment__author">Анастасия Красильникова
+              <p class="comment__author-login">@misssssiskras</p>
+            </cite>
+          </blockquote>
+          <nav class="comment__nav">
+            <a class="comment__link">
+              <svg class="comment__nav-link" role="img" aria-label="Предыдущий отзыв." focusable="false">
+                <use xlink:href="#arrow-ico"></use>
+              </svg>
+            </a>
+            <a class="comment__link">
+              <svg class="comment__nav-link comment__nav-link--next" role="img" aria-label="Следующий отзыв." focusable="false">
+                <use xlink:href="#arrow-ico"></use>
+              </svg>
+            </a>
+          </nav>
+          <a class="comment__button button button--color-white" href="#">Написать</a>
+        </section>
+      </div>
       <section class="contacts">
         <div class="page__container page__container--padding contacts__wrap">
           <h2 class="contacts__title section-title">Контакты</h2>
@@ -276,7 +293,7 @@
           </dl>
         </div>
         <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.822607321338!2d30.317408900000004!3d59.968266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1672250245510!5m2!1sru!2sru" width="320" height="454" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Наше местоположение на карте."></iframe>
-        <a class="contacts__button button button--color-white" href="#">Написать</a>
+        <a class="contacts__button button button--color-white" href="#">Напишите нам</a>
       </section>
     </main>
     <footer class="main-footer">
@@ -302,7 +319,7 @@
           </a>
         </div>
         <div class="main-footer__copyright copyright">
-          <b class="copyright__text">Разработано:</b>
+          <b class="copyright__text">Разработано</b>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <svg class="copyright__link-ico" role="img" aria-label="HTML-academy." focusable="false">
               <use xlink:href="#academy-logo"></use>

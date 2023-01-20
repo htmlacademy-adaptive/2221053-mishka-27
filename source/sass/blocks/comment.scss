@@ -4,6 +4,8 @@
 .comment {
   @include mixins.container;
 
+  padding-bottom: 50px;
+
   @media #{$media-t} {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -29,6 +31,8 @@
 }
 
 .comment__text {
+  margin-bottom: 30px;
+
   @media (min-width: 678px) {
     grid-row-start: 2;
     grid-column-start: 1;
@@ -37,7 +41,10 @@
 }
 
 .comment__author {
+  font-size: 17px;
+  line-height: 24px;
   font-weight: 700;
+  font-style: normal;
 
   @media #{$media-t} {
     font-size: 18px;
@@ -47,11 +54,12 @@
 .comment__author-login {
   font-weight: 400;
   line-height: 30px;
+  margin-top: 1px;
 }
 
 .comment__nav {
   display: flex;
-  gap: -1px;
+  margin-top: 30px;
 
   @media #{$media-t} {
     grid-row-start: 3;
@@ -68,6 +76,10 @@
   gap: -1px;
   box-sizing: border-box;
   border: 1px solid #ececec;
+
+  &:not(&:first-child) {
+    margin-left: -1px;
+  }
 }
 
 .comment__nav-link {
@@ -80,6 +92,11 @@
 
 .comment__button {
   @include mixins.link;
+
+  margin-top: 37px;
+  text-transform: uppercase;
+  padding: 15px;
+  padding-bottom: 13px;
 
   @media #{$media-t} {
     grid-row-start: 1;

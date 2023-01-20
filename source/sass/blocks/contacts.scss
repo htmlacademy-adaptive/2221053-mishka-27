@@ -2,6 +2,8 @@
 @use "../common/variables" as *;
 
 .contacts {
+  padding-bottom: 40px;
+
   @media #{$media-d} {
     display: grid;
     grid-template-columns: auto 527px;
@@ -20,6 +22,9 @@
 }
 
 .contacts__title {
+  margin-top: 39px;
+  margin-bottom: 29px;
+
   @media #{$media-t} {
     width: 100%;
     min-height: 81px;
@@ -38,14 +43,20 @@
 .contacts__button {
   @include mixins.container;
   @include mixins.link;
-  width: 230px;
+  width: 257px;
+  margin-top: 41px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-top: 15px;
+  padding-bottom: 13px;
 }
 
 .contacts__list {
   font-size: 14px;
   line-height: 30px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 3fr;
+  row-gap: 30px;
 
   @media #{$media-t} {
     font-size: 17px;
@@ -62,11 +73,12 @@
 }
 
 .contacts__name {
-  padding-right: 10px;
+  padding-right: 5px;
 }
 
 .contacts__value {
   margin: 0;
+  margin-left: 12px;
 
   @media #{$media-d} {
     width: 248px;
@@ -77,6 +89,7 @@
   width: 100vw;
   display: block;
   border: none;
+  margin-top: 62px;
 
   @media #{$media-t} {
     height: 457px;

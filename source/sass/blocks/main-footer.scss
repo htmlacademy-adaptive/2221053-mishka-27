@@ -3,6 +3,7 @@
 
 .main-footer {
   background-color: #f1f1f1;
+  padding-top: 20px;
 }
 
 .main-footer__wrap {
@@ -12,6 +13,7 @@
   flex-direction: column;
   align-items: center;
   width: 260px;
+  row-gap: 40px;
 
   @media #{$media-t} {
     flex-direction: row;

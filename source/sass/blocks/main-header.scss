@@ -51,6 +51,8 @@
 }
 
 .main-header__logo-img {
+  padding-top: 5px;
+
   @media #{$media-t} {
     width: 113px;
     height: 46px;
