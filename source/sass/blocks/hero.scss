@@ -16,11 +16,14 @@
     }
 
     @media (min-width: 708px) {
+      min-height: 566px;
       background-image: url("../img/hero-tablet.jpg");
+      background-position: center -69px;
+      padding-top: 94px;
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/hero-tablet@2x.jpg");
-        background-size: 708px auto;
+        background-size: 780px auto;
       }
     }
   }

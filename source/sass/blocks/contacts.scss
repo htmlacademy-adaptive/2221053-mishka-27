@@ -4,6 +4,12 @@
 .contacts {
   padding-bottom: 40px;
 
+  @media #{$media-t} {
+    padding-top: 7px;
+    padding-bottom: 57px;
+  }
+
+
   @media #{$media-d} {
     display: grid;
     grid-template-columns: auto 527px;
@@ -30,7 +36,9 @@
     min-height: 81px;
     background-image: url("../../img/ico/flag.svg");
     background-repeat: no-repeat;
-    background-position: 100% 0;
+    background-position: 618px 0;
+    padding-top: 22px;
+    margin-bottom: 19px;
   }
 
   @media #{$media-d} {
@@ -47,8 +55,14 @@
   margin-top: 41px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  padding: 5px;
   padding-top: 15px;
   padding-bottom: 13px;
+
+  @media #{$media-t} {
+    margin-top: 55px;
+    width: 216px;
+  }
 }
 
 .contacts__list {
@@ -60,8 +74,8 @@
 
   @media #{$media-t} {
     font-size: 17px;
-    grid-template-columns: 1fr 2fr 1fr 2fr;
-    gap: 10px;
+    grid-template-columns: 59px 1fr 73px 1fr;
+    gap: 8px;
   }
 
   @media #{$media-d} {
@@ -83,6 +97,12 @@
   @media #{$media-d} {
     width: 248px;
   }
+
+  &--address {
+    @media #{$media-t} {
+      margin-left: 0;
+    }
+  }
 }
 
 .contacts__map {
@@ -93,6 +113,7 @@
 
   @media #{$media-t} {
     height: 457px;
+    margin-top: 48px;
   }
 
   @media #{$media-d} {

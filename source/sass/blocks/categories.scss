@@ -22,6 +22,11 @@
   @media #{$media-d} {
     width: 1047px;
   }
+
+  &::after {
+    content: url("../img/ico/line-tablet.svg");
+    margin-top: -24px;
+  }
 }
 
 .categories__item {
@@ -51,6 +56,10 @@
   @include mixins.link(var(--white-color));
   padding-top: 24px;
   padding-bottom: 13px;
+
+  @media #{$media-t} {
+    padding-bottom: 7px;
+  }
 }
 
 .categories__wrap {
@@ -62,6 +71,7 @@
     box-sizing: border-box;
     gap: 90px;
     width: 262px;
+    padding-bottom: 30px;
   }
 
   @media #{$media-d} {

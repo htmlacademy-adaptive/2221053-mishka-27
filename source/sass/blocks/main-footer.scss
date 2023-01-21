@@ -4,6 +4,11 @@
 .main-footer {
   background-color: #f1f1f1;
   padding-top: 20px;
+
+  @media #{$media-t} {
+    padding-top: 49px;
+    padding-bottom: 50px;
+  }
 }
 
 .main-footer__wrap {

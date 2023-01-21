@@ -1,6 +1,38 @@
+@use "../common/variables" as *;
+
 .line-bottom {
   background-image: url("../img/ico/line-mobile.svg");
   background-position: center bottom;
   background-size: 320px auto;
   background-repeat: repeat-x;
+
+  @media #{$media-t} {
+    background-size: 772px 17px;
+  }
+
+  &--comment {
+    @media #{$media-t} {
+      position: relative;
+      margin-top: 61px;
+      padding-bottom: 67px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      background-image: url("../img/review 2.jpg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 350px auto;
+      width: 350px;
+      height: 457px;
+      top: 0;
+      left: 0;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/review 2@2x.jpg");
+      }
+    }
+  }
 }

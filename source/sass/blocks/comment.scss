@@ -5,10 +5,12 @@
   @include mixins.container;
 
   padding-bottom: 50px;
+  z-index: 2;
 
   @media #{$media-t} {
     display: grid;
     grid-template-columns: 1fr auto;
+    margin-top: 42px;
   }
 
   @media #{$media-d} {
@@ -32,11 +34,13 @@
 
 .comment__text {
   margin-bottom: 30px;
+  z-index: 2;
 
-  @media (min-width: 678px) {
+  @media (min-width: 708px) {
     grid-row-start: 2;
     grid-column-start: 1;
     grid-column-end: 3;
+    margin-top: 23px;
   }
 }
 
@@ -45,9 +49,11 @@
   line-height: 24px;
   font-weight: 700;
   font-style: normal;
+  z-index: 3;
 
   @media #{$media-t} {
     font-size: 18px;
+    margin-top: 30px;
   }
 }
 
@@ -64,6 +70,8 @@
   @media #{$media-t} {
     grid-row-start: 3;
     grid-column-start: 2;
+    width: 176px;
+    padding-top: 4px;
   }
 }
 
@@ -101,5 +109,8 @@
   @media #{$media-t} {
     grid-row-start: 1;
     grid-column-start: 2;
+    align-self: start;
+    justify-self: end;
+    min-width: 141px;
   }
 }

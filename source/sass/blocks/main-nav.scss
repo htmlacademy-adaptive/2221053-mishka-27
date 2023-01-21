@@ -45,7 +45,7 @@
   @media #{$media-t} {
     width: 167px;
     padding-left: 0;
-    padding-top: 21px;
+    padding-top: 13px;
   }
 
   @media #{$media-d} {
@@ -53,6 +53,12 @@
   }
 
   &--shadow {
+    @media #{$media-t} {
+      padding-top: 20px;
+      padding-bottom: 15px;
+      letter-spacing: -1px;
+    }
+
     @media #{$media-d} {
       box-shadow: -1px 0 0 0 rgba(#000000, 0.1);
     }
@@ -61,7 +67,20 @@
   &--search {
     @media #{$media-t} {
       font-size: 0;
-      width: 82px;
+      width: 80px;
+      border-left: 1px solid rgba(var(--black-color), 0.5);
+      border-right: 1px solid rgba(var(--black-color), 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+    }
+  }
+
+  &--basket {
+    @media #{$media-t} {
+      width: 264px;
+      text-align: right;
     }
   }
 
@@ -92,6 +111,11 @@
     width: 18px;
     margin-right: 26px;
     margin-left: -46px;
+
+    @media #{$media-t} {
+      margin: 0;
+      padding: 0;
+    }
   }
 
   &--basket {
