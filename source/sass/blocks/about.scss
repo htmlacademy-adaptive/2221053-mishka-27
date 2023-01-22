@@ -11,6 +11,10 @@
 
 .about {
   @include mixins.container;
+
+  @media #{$media-d} {
+    padding-left: 154px;
+  }
 }
 
 .about__title {
@@ -18,6 +22,12 @@
 
   @media #{$media-t} {
     margin-top: 56px;
+  }
+
+  @media #{$media-d} {
+    margin-top: 68px;
+    margin-left: 19px;
+    margin-bottom: 34px;
   }
 }
 
@@ -29,6 +39,12 @@
   @media #{$media-t} {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media #{$media-d} {
+    width: 699px;
+    margin-top: 26px;
+    margin-left: 20px;
   }
 }
 

@@ -1,3 +1,5 @@
+@use "../common/variables" as *;
+
 .copyright {
   font-weight: 700;
   font-size: 19px;
@@ -5,6 +7,10 @@
   display: flex;
   align-items: center;
   gap: 27px;
+
+  @media #{$media-d} {
+    margin-top: -6px;
+  }
 }
 
 .copyright__link-ico {

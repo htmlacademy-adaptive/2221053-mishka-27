@@ -20,12 +20,23 @@
   }
 
   @media #{$media-d} {
-    width: 1047px;
+    width: 1050px;
   }
 
   &::after {
     content: url("../img/ico/line-tablet.svg");
     margin-top: -24px;
+
+    @media #{$media-d} {
+      content: "";
+      margin-top: -29px;
+      display: block;
+      background-image: url("../img/ico/line-tablet.svg");
+      width: 100vw;
+      background-position: center 0;
+      background-size: 1250px 34px;
+      background-repeat: repeat-x;
+    }
   }
 }
 
@@ -75,7 +86,9 @@
   }
 
   @media #{$media-d} {
-    gap: 74px;
+    gap: 0;
+    justify-content: space-between;
+    width: 452px;
   }
 
   &--lamp::after {

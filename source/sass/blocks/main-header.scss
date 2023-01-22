@@ -4,7 +4,7 @@
 .main-header {
   width: 100vw;
   mix-blend-mode: normal;
-  box-shadow: 0 1px 0 #ececec, inset 0 1 0 #ececec;
+  box-shadow: 0 1px 0 #ececec, inset 0 1px 0 #ececec;
   height: 79px;
   z-index: 1;
 
@@ -48,7 +48,10 @@
   }
 
   @media #{$media-d} {
-    justify-content: center;
+    display: block;
+    margin-top: 4px;
+    margin-left: 21px;
+    height: 85px;
   }
 }
 
@@ -130,6 +133,10 @@
     align-items: center;
   }
 
+  @media #{$media-d} {
+    margin-top: -6px;
+  }
+
   &::after {
     content: "";
     height: 100%;
@@ -143,6 +150,7 @@
 
     @media #{$media-d} {
       right: calc((1047px - 100vw) / 2);
+      top: 6px;
     }
   }
 }

@@ -4,6 +4,7 @@
 @use "./common/fonts";
 @use "./blocks/visully-hidden";
 @use "./blocks/page";
+@use "./blocks/section-title";
 @use "./blocks/button";
 @use "./blocks/main-header";
 @use "./blocks/main-nav";
@@ -12,7 +13,6 @@
 @use "./blocks/page-title";
 @use "./blocks/categories";
 @use "./blocks/promo";
-@use "./blocks/section-title";
 @use "./blocks/about";
 @use "./blocks/comment";
 @use "./blocks/contacts";

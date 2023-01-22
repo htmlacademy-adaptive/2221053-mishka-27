@@ -37,4 +37,9 @@
   @media (min-width: 678px) {
     display: block;
   }
+
+  @media #{$media-d} {
+    margin-left: -2px;
+    margin-top: 2px;
+  }
 }
