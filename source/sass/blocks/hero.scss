@@ -27,17 +27,17 @@
         background-size: 780px auto;
       }
     }
-  }
 
-  @media (min-width: 1060px) {
-    background-image: url("../img/hero-desktop.jpg");
-    background-size: 1150px 746px;
-    padding-top: 86px;
-    min-height: 555px;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/hero-desktop@2x.jpg");
+    @media (min-width: 1060px) {
+      background-image: url("../img/hero-desktop.jpg");
       background-size: 1150px 746px;
+      padding-top: 86px;
+      min-height: 555px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/hero-desktop@2x.jpg");
+        background-size: 1150px 746px;
+      }
     }
   }
 }
