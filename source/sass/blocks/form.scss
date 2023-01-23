@@ -76,6 +76,10 @@
     margin-top: 29px;
   }
 
+  @media #{$media-d} {
+    justify-self: center;
+  }
+
   &--modal {
     font-weight: 400;
     font-size: 15px;
@@ -184,6 +188,10 @@
       gap: 26px;
       padding-bottom: 51px;
     }
+
+    @media #{$media-d} {
+      margin-left: -3px;
+    }
   }
 
   &--checkbox {
@@ -201,6 +209,14 @@
       row-gap: 24px;
       padding-bottom: 50px;
     }
+
+    @media #{$media-d} {
+      margin-left: -1px;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-top: 46px;
+      column-gap: 12px;
+      width: 773px;
+    }
   }
 
   &--name {
@@ -208,6 +224,10 @@
       margin-top: 66px;
       gap: 18px;
       padding-bottom: 28px;
+    }
+
+    @media #{$media-d} {
+      grid-column: 2/6;
     }
   }
 }
@@ -267,6 +287,10 @@
   &--radio {
     @media #{$media-t} {
       flex-direction: row;
+    }
+
+    @media #{$media-d} {
+      gap: 29px;
     }
   }
 
@@ -343,6 +367,10 @@
       font-size: 19px;
       letter-spacing: 0;
     }
+
+    @media #{$media-d} {
+      grid-column: 2/6;
+    }
   }
 
   &--ico {
@@ -372,7 +400,7 @@
   }
 
   @media #{$media-d} {
-    grid-column: 4/7;
+    grid-column: 4/6;
   }
 }
 
@@ -404,5 +432,7 @@
 
   @media #{$media-d} {
     grid-column: 2/4;
+    grid-row: 1/2;
+    margin-top: 3px;
   }
 }
