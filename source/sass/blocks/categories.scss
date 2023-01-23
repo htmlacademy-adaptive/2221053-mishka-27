@@ -20,7 +20,23 @@
   }
 
   @media #{$media-d} {
-    width: 1047px;
+    width: 1050px;
+  }
+
+  &::after {
+    content: url("../img/ico/line-tablet.svg");
+    margin-top: -24px;
+
+    @media #{$media-d} {
+      content: "";
+      margin-top: -29px;
+      display: block;
+      background-image: url("../img/ico/line-tablet.svg");
+      width: 100vw;
+      background-position: center 0;
+      background-size: 1250px 34px;
+      background-repeat: repeat-x;
+    }
   }
 }
 
@@ -50,17 +66,51 @@
 .categories__link {
   @include mixins.link(var(--white-color));
   padding-top: 24px;
-  padding-bottom: 31px;
+  padding-bottom: 13px;
+
+  @media #{$media-t} {
+    padding-bottom: 7px;
+  }
+}
+
+.categories__wrap {
   display: flex;
-  gap: 60px;
-  justify-content: space-around;
+  gap: 91px;
+  justify-content: center;
 
   @media #{$media-t} {
     box-sizing: border-box;
-    gap: 72px;
+    gap: 90px;
+    width: 262px;
+    padding-bottom: 30px;
   }
 
   @media #{$media-d} {
-    gap: 74px;
+    gap: 0;
+    justify-content: space-between;
+    width: 452px;
   }
+
+  &::after {
+    opacity: 0.5;
+  }
+
+  &--lamp::after {
+    content: url("../img/ico/lamp.svg");
+    display: block;
+    width: 40px;
+    transform: translateX(-5px);
+  }
+
+  &--toy::after {
+    content: url("../img/ico/toy.svg");
+    display: block;
+    width: 60px;
+    transform: translate(2px, -4px);
+  }
+}
+
+.categories__title {
+  width: 130px;
+  margin: 0;
 }

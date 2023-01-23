@@ -1,20 +1,59 @@
 @use "../common/mixins";
 @use "../common/variables" as *;
 
+@mixin about-mixin {
+  content: "";
+  display: block;
+  min-width: 100%;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+}
+
 .about {
   @include mixins.container;
+
+  @media #{$media-d} {
+    padding-left: 154px;
+  }
+}
+
+.about__title {
+  margin-top: 32px;
+
+  @media #{$media-t} {
+    margin-top: 56px;
+  }
+
+  @media #{$media-d} {
+    margin-top: 68px;
+    margin-left: 19px;
+    margin-bottom: 34px;
+  }
 }
 
 .about__list {
   @include mixins.list-reset;
 
+  margin-top: 28px;
+
   @media #{$media-t} {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+
+  @media #{$media-d} {
+    width: 699px;
+    margin-top: 26px;
+    margin-left: 20px;
+  }
 }
 
 .about__item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+
   @media #{$media-t} {
     &:nth-child(1) {
       order: -5;
@@ -36,11 +75,91 @@
       order: -2;
     }
   }
+
+  &--flower::before {
+    @include about-mixin();
+    height: 44px;
+    background-position: 0 0;
+
+    background-image: url("../img/ico/flower.svg");
+    margin-left: 8px;
+
+    @media #{$media-t} {
+      margin-top: 5px;
+      min-width: 50%;
+      height: 47px;
+    }
+  }
+
+  &--money::before {
+    @include about-mixin();
+
+    height: 54px;
+    background-image: url("../img/ico/money.svg");
+    background-position: 0 9px;
+
+    @media #{$media-t} {
+      height: 79px;
+      background-position: 1px 35px;
+    }
+  }
+
+  &--like::before {
+    @include about-mixin();
+
+    height: 54px;
+    background-image: url("../img/ico/like.svg");
+    transform: translateX(6px);
+
+    @media #{$media-t} {
+      height: 80px;
+      background-position: 2px 41px;
+    }
+  }
+
+  &--tangle::before {
+    @include about-mixin();
+
+    height: 52px;
+    background-image: url("../img/ico/tangle.svg");
+
+    @media #{$media-t} {
+      margin-left: 3px;
+      height: 53px;
+    }
+  }
+
+  &--rocket::before {
+    @include about-mixin();
+
+    height: 52px;
+    background-image: url("../img/ico/rocket.svg");
+    background-position: 0 12px;
+    transform: translateX(-5px);
+
+    @media #{$media-t} {
+      height: 80px;
+      background-position: 0 38px;
+    }
+  }
+
+  &--gift::before {
+    @include about-mixin();
+
+    height: 54px;
+    background-image: url("../img/ico/gift.svg");
+
+    @media #{$media-t} {
+      background-position: 3px 37px;
+      height: 81px;
+    }
+  }
 }
 
 .about__text {
   font-weight: 700;
   line-height: 20px;
+  margin: 0;
 
   @media #{$media-t} {
     font-size: 20px;

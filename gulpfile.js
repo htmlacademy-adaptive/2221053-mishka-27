@@ -5,6 +5,14 @@ import postcss from 'gulp-postcss';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 
+export const css = () => {
+  return gulp.src('./src/*.css')
+    .pipe(postcss([
+      autoprefixer(),
+    ]))
+    .pipe(gulp.dest('./dest'))
+};
+
 // Styles
 
 export const styles = () => {

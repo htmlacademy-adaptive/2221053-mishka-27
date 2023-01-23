@@ -1,0 +1,51 @@
+@use "../common/variables" as *;
+
+.line-bottom {
+  background-image: url("../img/ico/line-mobile.svg");
+  background-position: center bottom;
+  background-size: 320px auto;
+  background-repeat: repeat-x;
+  width: 100vw;
+
+  @media #{$media-t} {
+    background-size: 772px 17px;
+  }
+
+  @media #{$media-d} {
+    padding-bottom: 28px;
+    background-size: 1050px 23px;
+    background-repeat: no-repeat;
+  }
+
+  &--comment {
+    @media #{$media-t} {
+      position: relative;
+      margin-top: 61px;
+      padding-bottom: 67px;
+    }
+
+    &::before {
+      @media #{$media-t} {
+        content: "";
+        position: absolute;
+        display: block;
+        background-image: url("../img/review 2.jpg");
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: 350px auto;
+        width: 350px;
+        height: 457px;
+        top: 0;
+        left: 0;
+
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/review 2@2x.jpg");
+        }
+
+        @media #{$media-d} {
+          display: none;
+        }
+      }
+    }
+  }
+}

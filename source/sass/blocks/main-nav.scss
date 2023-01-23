@@ -13,12 +13,11 @@
 
   &--desktop {
     display: none;
-    background-color: var(--gray);
 
     @media #{$media-d} {
       display: flex;
       width: 100%;
-      font-size: 15px;
+      gap: 50px;
     }
   }
 
@@ -31,6 +30,8 @@
 
 .main-nav__link {
   @include mixins.link();
+
+  font-size: 17px;
   display: block;
   width: 100vw;
   padding: 28px 0 27px 76px;
@@ -43,29 +44,61 @@
   @media #{$media-t} {
     width: 167px;
     padding-left: 0;
-    padding-top: 21px;
+    padding-top: 13px;
   }
 
   @media #{$media-d} {
     width: 174px;
   }
 
-  &--ico {
-    font-size: 17px;
-
+  &--shadow {
     @media #{$media-t} {
-      width: max-content;
-      padding-right: 0;
-      padding-top: 21px;
-      padding-left: 31px;
-      box-shadow: -1px 0 0 0 rgba(#000000, 0.1);
+      padding-top: 20px;
+      padding-bottom: 15px;
+      letter-spacing: -1px;
+    }
+
+    @media #{$media-d} {
+      padding-top: 33px;
+      padding-bottom: 7px;
+      letter-spacing: unset;
     }
   }
 
-  &--shadow {
+  &--shadow-padding {
     @media #{$media-d} {
-      box-shadow: -1px 0 0 0 rgba(#000000, 0.1);
+      position: relative;
+      margin-left: 11px;
+      box-shadow: -2px 0 0 -1px #ffffff, -2px 0 0 0 rgba(#000000, 0.1);
+      padding-left: 35px;
+      width: auto;
     }
+  }
+
+  &--search {
+    @media #{$media-t} {
+      font-size: 0;
+      width: 80px;
+      border-left: 1px solid rgb(0 0 0 / 10%);
+      border-right: 1px solid rgb(0 0 0 / 10%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &--basket {
+    @media #{$media-t} {
+      width: 264px;
+      text-align: right;
+    }
+  }
+
+  &--desktop {
+    width: max-content;
+    font-size: 15px;
+    padding-top: 20px;
+    padding-right: 10px;
   }
 
   &:hover span {
@@ -80,4 +113,28 @@
 .main-nav__ico {
   mix-blend-mode: normal;
   opacity: 0.2;
+  height: 18px;
+
+  @media #{$media-t} {
+    width: max-content;
+    padding-right: 0;
+    padding-top: 21px;
+    padding-left: 31px;
+    box-shadow: -1px 0 0 0 rgba(#000000, 0.1);
+    background-repeat: no-repeat;
+  }
+
+  &--search {
+    width: 18px;
+
+    & + span {
+      margin-left: 26px;
+    }
+  }
+
+  &--basket {
+    width: 21px;
+    margin-right: 25px;
+    margin-left: -46px;
+  }
 }

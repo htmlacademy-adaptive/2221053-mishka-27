@@ -5,9 +5,32 @@
   font-size: 25px;
   line-height: 30px;
   color: var(--black-color);
+  margin-top: 0;
 
   @media #{$media-t} {
     font-size: 43px;
     line-height: 50px;
+  }
+
+  @media #{$media-d} {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+
+  &--comment {
+    margin-top: 38px;
+    margin-bottom: 0;
+    z-index: 2;
+
+    @media #{$media-t} {
+      margin-top: 42px;
+      margin-bottom: 16px;
+    }
+  }
+
+  @media #{$media-d} {
+    margin-top: 42px;
+    margin-left: -1px;
   }
 }

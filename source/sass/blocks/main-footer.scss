@@ -3,16 +3,31 @@
 
 .main-footer {
   background-color: #f1f1f1;
+  padding-top: 20px;
+
+  @media #{$media-t} {
+    padding-top: 49px;
+    padding-bottom: 50px;
+  }
 }
 
 .main-footer__wrap {
   @include mixins.container;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 260px;
+  row-gap: 40px;
 
-  @media (min-width: 678px) {
+  @media #{$media-t} {
+    flex-direction: row;
     justify-content: space-between;
+    width: 668px;
+  }
+
+  @media #{$media-d} {
+    width: 1047px;
   }
 }
 
@@ -21,5 +36,10 @@
 
   @media (min-width: 678px) {
     display: block;
+  }
+
+  @media #{$media-d} {
+    margin-left: -2px;
+    margin-top: 2px;
   }
 }

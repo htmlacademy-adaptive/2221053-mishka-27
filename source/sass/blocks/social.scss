@@ -1,0 +1,17 @@
+@use "../common/variables" as *;
+
+.social {
+  display: flex;
+  gap: 18px;
+
+  @media #{$media-d} {
+    margin-left: 2px;
+    margin-top: 1px;
+  }
+}
+
+.social__link-ico {
+  width: 28px;
+  height: 22px;
+  margin: 6px;
+}

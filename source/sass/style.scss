@@ -4,6 +4,7 @@
 @use "./common/fonts";
 @use "./blocks/visully-hidden";
 @use "./blocks/page";
+@use "./blocks/section-title";
 @use "./blocks/button";
 @use "./blocks/main-header";
 @use "./blocks/main-nav";
@@ -12,17 +13,19 @@
 @use "./blocks/page-title";
 @use "./blocks/categories";
 @use "./blocks/promo";
-@use "./blocks/section-title";
 @use "./blocks/about";
 @use "./blocks/comment";
 @use "./blocks/contacts";
 @use "./blocks/main-footer";
 @use "./blocks/copyright";
+@use "./blocks/control";
 @use "./blocks/form";
 @use "./blocks/product-card";
 @use "./blocks/card";
 @use "./blocks/product-create";
 @use "./blocks/add-product-basket";
+@use "./blocks/social";
+@use "./blocks/line-bottom";
 
 .main-nav--closed + .main-header__menu-open::before {
   content: "";
@@ -33,7 +36,7 @@
   width: 20px;
   height: 2px;
   background-color: #231f20;
-  box-shadow: 0 8px 0 0 #231f20, 0 16px 0 0 #231f20;
+  box-shadow: 0 6px 0 0 #231f20, 0 12px 0 0 #231f20;
 }
 
 .main-nav--opened + .main-header__menu-open {
@@ -41,8 +44,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 36px;
-    left: 25px;
+    top: 38px;
+    left: 27px;
     width: 28px;
     height: 2px;
     background-color: #231f20;
