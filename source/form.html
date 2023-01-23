@@ -70,34 +70,34 @@
           </div>
         </div>
         <div class="form__fieldset form__fieldset--color">
-          <h4 class="form__legend form__legend--line">Цвет</h4>
+          <h4 class="form__legend form__legend--line form__legend--color">Цвет</h4>
           <div class="form__item-wrap form__item-wrap--grid form__item-wrap--checkbox">
-            <label class="form__label">
+            <label class="form__label form__label--checkbox">
               <input class="form__control visually-hidden" type="checkbox" name="color" value="white" checked>
               <span class="control control--check"></span>
               <span>Белый</span>
             </label>
-            <label class="form__label">
+            <label class="form__label form__label--checkbox">
               <input class="form__control visually-hidden" type="checkbox" name="color" value="gray" checked>
               <span class="control control--check"></span>
               <span>Серый</span>
             </label>
-            <label class="form__label">
+            <label class="form__label form__label--checkbox">
               <input class="form__control visually-hidden" type="checkbox" name="color" value="tiffany">
               <span class="control control--check"></span>
               <span>Тиффани</span>
             </label>
-            <label class="form__label">
+            <label class="form__label form__label--checkbox">
               <input class="form__control visually-hidden" type="checkbox" name="color" value="black">
               <span class="control control--check"></span>
               <span>Черный</span>
             </label>
-            <label class="form__label">
+            <label class="form__label form__label--checkbox">
               <input class="form__control visually-hidden" type="checkbox" name="color" value="pink">
               <span class="control control--check"></span>
               <span>Розовый</span>
             </label>
-            <label class="form__label">
+            <label class="form__label form__label--checkbox">
               <input class="form__control visually-hidden" type="checkbox" name="color" value="orange">
               <span class="control control--check"></span>
               <span>Оранжевый</span>
@@ -106,7 +106,7 @@
         </div>
         <div class="form__fieldset">
           <h4 class="form__legend form__legend--line form__legend--name">ФИО</h4>
-          <div class="form__item-wrap form__item-wrap--flex">
+          <div class="form__item-wrap form__item-wrap--flex form__item-wrap--name">
             <label class="form__label form__label--edit">
               <span>Имя:</span>
               <input class="form__edit" type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
@@ -121,17 +121,17 @@
             </label>
           </div>
         </div>
-        <div class="form__fieldset form__fieldset--color form__fieldset">
+        <div class="form__fieldset form__fieldset--color">
           <h4 class="form__legend form__legend--line form__legend--phone">тел</h4>
           <label class="form__label--ico" for="phone-number">
-            <input class="form__edit form__item-wrap" type="text" name="phone-number" id="phone-number" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+            <input class="form__edit form__edit--ico" type="text" name="phone-number" id="phone-number" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
             <img class="form__ico" src="/img/ico/phone.svg" alt=".">
           </label>
         </div>
-        <div class="form__fieldset form__fieldset--color">
+        <div class="form__fieldset form__fieldset--color form__fieldset--mail">
           <h4 class="form__legend form__legend--line form__legend--mail">E-mail</h4>
-          <label class="form__label--ico" for="mail">
-            <input class="form__edit form__item-wrap" type="text" name="mail" id="mail" placeholder="Ваш Email*" required>
+          <label class="form__label--ico form__label--mail" for="mail">
+            <input class="form__edit form__edit--ico" type="text" name="mail" id="mail" placeholder="Ваш Email*" required>
             <img class="form__ico" src="/img/ico/letter.svg" alt=".">
           </label>
         </div>
@@ -139,8 +139,8 @@
           <h4 class="form__legend form__legend--line form__legend--additionally">Доп</h4>
           <textarea class="form__edit form__edit--multi form__item-wrap" name="additionally" id="additionally" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </div>
-        <p class="form__fooutnote">*Поля обязательны для заполнения</p>
         <div class="form__button-wrap">
+          <p class="form__fooutnote">*Поля обязательны для заполнения</p>
           <submit class="form__button" >ОТПРАВИТЬ ЗАКАЗ</submit>
         </div>
       </form>
