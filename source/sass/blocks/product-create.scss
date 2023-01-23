@@ -4,28 +4,77 @@
 .product-create {
   display: flex;
   flex-direction: column;
+  border: 1px solid #ececec;
+  margin-top: 28px;
+  padding-bottom: 32px;
+  margin-bottom: 58px;
+
+  @media #{$media-t} {
+    margin-top: 53px;
+    padding-bottom: 46px;
+    margin-bottom: 63px;
+  }
 
   @media #{$media-d} {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: 683px auto;
+    grid-template-rows: auto auto 1fr;
+    justify-content: start;
+    column-gap: 79px;
+    margin-top: 55px;
+    transform: translateX(-1px);
+    padding-bottom: 0;
+    margin-bottom: 105px;
+  }
+}
+
+.product-create__wrap {
+  position: relative;
+  margin-top: 13px;
+
+  @media #{$media-t} {
+    margin-top: 0;
+  }
+
+  @media #{$media-d} {
+    grid-row: 1/4;
   }
 }
 
 .product-create__video {
-  @media #{$media-d} {
-    grid-row: 1/4;
-    grid-column: 1/4;
+  display: block;
+  border: none;
+
+  @media #{$media-t} {
+    width: 668px;
+    height: 455px;
   }
+
+  @media #{$media-d} {
+    width: 683px;
+  }
+}
+
+.product-create__play {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: transparent;
+  color: var(--light-green);
+  padding: 0;
+  border: none;
 }
 
 .product-create__title {
   font-size: 20px;
-  width: 280px;
 
   @include mixins.container;
 
-  display: flex;
   gap: 25px;
+  width: 192px;
+  margin-top: 20px;
+  align-items: center;
+  display: flex;
 
   @media (max-width: $tablet) {
     font-size: 17px;
@@ -35,11 +84,18 @@
   @media #{$media-t} {
     width: 611px;
     gap: 33px;
+    margin-top: 38px;
+    margin-left: 41px;
   }
 
   @media #{$media-d} {
-    grid-column: 4/7;
     flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+    margin-top: 47px;
+    gap: 22px;
+    margin-bottom: 0;
+    width: 234px;
   }
 
   &::before {
@@ -52,9 +108,11 @@
   font-size: 15px;
   line-height: 30px;
   color: var(--light-black);
-  width: 280px;
+  width: 193px;
 
   @include mixins.container;
+
+  margin-top: 34px;
 
   @media (max-width: $tablet) {
     font-size: 13px;
@@ -63,23 +121,38 @@
 
   @media #{$media-t} {
     width: 611px;
+    margin-top: 5px;
+    margin-left: 40px;
   }
 
   @media #{$media-d} {
-    grid-column: 4/7;
+    width: 253px;
+    margin-top: 25px;
+    margin-left: 0;
   }
 }
 
 .product-create__button {
-  width: 280px;
+  width: 187px;
 
   @include mixins.container;
 
+  margin-top: 29px;
+  padding-top: 15px;
+  padding-bottom: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
   @media #{$media-t} {
-    width: 584px;
+    width: 580px;
+    margin-top: 26px;
+    letter-spacing: 0;
   }
 
   @media #{$media-d} {
-    grid-column: 4/7;
+    width: 226px;
+    margin: 0;
+    margin-top: 39px;
+    align-self: start;
   }
 }

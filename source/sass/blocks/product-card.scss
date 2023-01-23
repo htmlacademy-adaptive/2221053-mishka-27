@@ -3,6 +3,17 @@
 
 .product-card {
   @include mixins.container;
+
+  @media #{$media-t} {
+    margin-top: 38px;
+    padding-top: 30px;
+  }
+
+  @media #{$media-d} {
+    margin-top: 110px;
+    padding-top: 0;
+    width: 1150px;
+  }
 }
 
 .product-card__list {
@@ -12,12 +23,14 @@
   gap: 30px;
 
   @media #{$media-t} {
-    gap: 54px;
+    gap: 52px;
   }
 
   @media #{$media-d} {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    margin-left: -2px;
+    gap: 50px;
   }
 }

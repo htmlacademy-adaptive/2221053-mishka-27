@@ -2,25 +2,59 @@
 
 .card {
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 33px;
-  grid-template-areas: "photo photo" "title title" "description description" "price button";
+  grid-template-columns: 1fr 1fr 47px;
+  grid-template-areas: "photo photo photo" "title title title" "description description description" "price . button";
+  border: 1px solid #ececec;
+  padding-bottom: 26px;
+  box-sizing: border-box;
 
   @media #{$media-t} and (max-width: $desktop) {
-    grid-template-columns: auto 1fr auto;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas: "photo title title" "photo description description" "photo price button";
+    grid-template-columns: auto 216px auto 1fr;
+    grid-template-rows: auto auto 1fr 26px;
+    grid-template-areas: "photo title title title" "photo description description description" "photo price button ." "photo . . .";
+    column-gap: 32px;
+    padding-bottom: 0;
+  }
+
+  @media #{$media-d} {
+    margin: 0;
+    width: 316px;
+    grid-template-columns: 1fr 1fr 53px;
   }
 }
 
 .card__photo {
   grid-area: photo;
+
+  @media #{$media-t} {
+    width: 334px;
+    height: 334px;
+  }
+
+  @media #{$media-d} {
+    width: 316px;
+    height: 462px;
+  }
 }
 
 .card__product-name {
   font-size: 17px;
   line-height: 24px;
   grid-area: title;
+  margin: 0;
+  margin-top: 21px;
+  margin-left: 28px;
+
+  @media #{$media-t} {
+    font-size: 20px;
+    margin-top: 26px;
+    margin-left: 0;
+  }
+
+  @media #{$media-d} {
+    margin-top: 22px;
+    margin-left: 27px;
+  }
 }
 
 .card__description {
@@ -28,14 +62,68 @@
   line-height: 30px;
   color: var(--light-black);
   grid-area: description;
+  margin: 0;
+  margin-top: 5px;
+  margin-left: 27px;
+  position: relative;
+
+  @media #{$media-t} {
+    font-size: 15px;
+    margin-left: 0;
+  }
+
+  @media #{$media-d} {
+    margin-top: 0;
+    margin-left: 27px;
+    line-height: 29px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 204px;
+    height: 1px;
+    background-color: #ececec;
+    left: 0;
+    bottom: -18px;
+
+    @media #{$media-t} {
+      width: 268px;
+      bottom: -175px;
+    }
+  }
 }
 
 .card__price {
   font-weight: 700;
   font-size: 15px;
   grid-area: price;
+  margin-bottom: 0;
+  margin-top: 42px;
+  margin-left: 27px;
+
+  @media #{$media-t} {
+    font-size: 17px;
+    align-self: end;
+    margin-left: 0;
+  }
+
+  @media #{$media-d} {
+    margin-top: 47px;
+    margin-left: 27px;
+  }
 }
 
 .card__button {
   grid-area: button;
+  align-self: end;
+  opacity: 0.2;
+}
+
+.card__button-ico {
+  @media #{$media-t} {
+    width: 21px;
+    height: 18px;
+  }
 }
