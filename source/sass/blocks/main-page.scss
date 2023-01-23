@@ -8,7 +8,9 @@
 
 .main-page__description {
   font-size: 13px;
-  width: $content-width;
+  width: 260px;
+  margin-top: 18px;
+  margin-bottom: 0;
 
   @media #{$media-t} {
     width: 668px;

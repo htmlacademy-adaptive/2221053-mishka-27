@@ -91,6 +91,10 @@
     width: 452px;
   }
 
+  &::after {
+    opacity: 0.5;
+  }
+
   &--lamp::after {
     content: url("../img/ico/lamp.svg");
     display: block;
