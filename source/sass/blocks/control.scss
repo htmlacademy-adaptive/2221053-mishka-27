@@ -1,3 +1,5 @@
+@use "../common/variables" as *;
+
 .control {
   border: 2px solid var(--light-black);
   box-sizing: border-box;
@@ -16,5 +18,12 @@
     width: 40px;
     height: 40px;
     margin-right: 0;
+
+    @media #{$media-t} {
+      width: 50px;
+      height: 49px;
+      margin-left: 3px;
+      margin-top: 1px;
+    }
   }
 }
