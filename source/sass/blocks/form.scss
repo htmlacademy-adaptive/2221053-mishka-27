@@ -85,6 +85,8 @@
     font-size: 15px;
     line-height: 30px;
     color: var(--light-black);
+    letter-spacing: -0.5px;
+    margin-top: 16px;
   }
 
   &--line {
@@ -236,6 +238,10 @@
   @include mixins.list-reset;
   display: flex;
   justify-content: center;
+
+  &--modal {
+    gap: 9px;
+  }
 }
 
 .form__label {
@@ -310,6 +316,13 @@
         right: 22px;
       }
     }
+  }
+
+  &--size {
+    display: block;
+    padding: 17px 32px;
+    border: 2px solid rgba(#444444, 0.1);
+    margin-top: 20px;
   }
 }
 

@@ -330,33 +330,33 @@
         </div>
       </div>
     </footer>
-    <div class="page__modal page__modal--hidden">
-      <article class="page__container add-product-basket">
-        <h2 class="section-title">Добавить в корзину</h2>
-        <form class="form" action="#" method="GET">
-          <fieldset class="form__fieldset">
-            <legend class="form__legend form__legend form__legend--modal">Выберите размер:</legend>
-            <ul class="form__list">
+    <div class="page__modal">
+      <article class="add-product-basket">
+        <h2 class="section-title section-title--modal">Добавить в&nbsp;корзину</h2>
+        <form class="page__container form form--modal" action="#" method="GET">
+<!--          <div class="form__fieldset">  -->
+            <h2 class="form__legend form__legend form__legend--modal">Выберите размер:</h2>
+            <ul class="form__list form__list--modal">
               <li class="form__item">
-                <label class="form__label form__label--modal">
-                  <input class="form__checkbox" type="checkbox" checked>
-                  S
+                <label class=" form__label form__label--modal">
+                  <input class="form__checkbox-modal visually-hidden" type="radio" name="s-size" id="s-size" checked>
+                  <span class="form__label--size">S</span>
                 </label>
               </li>
               <li class="form__item">
                 <label class="form__label form__label--modal">
-                  <input class="form__checkbox" type="checkbox">
-                  M
+                  <input class="form__checkbox-modal visually-hidden" type="radio" name="s-size" id="s-size">
+                  <span class="form__label--size">M</span>
                 </label>
               </li>
               <li class="form__item">
                 <label class="form__label form__label--modal">
-                  <input class="form__checkbox" type="checkbox">
-                  L
+                  <input class="form__checkbox-modal visually-hidden" type="radio" name="s-size" id="s-size">
+                  <span class="form__label--size">L</span>
                 </label>
               </li>
             </ul>
-          </fieldset>
+<!--          </div>  -->
           <button class="button button--green" type="submit">Добавить</button>
         </form>
       </article>
