@@ -2,16 +2,14 @@ import gulp from 'gulp';
 import plumber from 'gulp-plumber';
 import sass from 'gulp-dart-sass';
 import postcss from 'gulp-postcss';
+import csso from 'postcss-csso';
+import rename from 'gulp-rename';
 import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
-
-export const css = () => {
-  return gulp.src('./src/*.css')
-    .pipe(postcss([
-      autoprefixer(),
-    ]))
-    .pipe(gulp.dest('./dest'))
-};
+import htmlmin from 'gulp-htmlmin';
+import terser from 'gulp-terser';
+import squoosh from 'gulp-libsquoosh';
+import squoosh from 'gulp-libsquoosh';
 
 // Styles
 
@@ -20,10 +18,51 @@ export const styles = () => {
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      csso()
     ]))
-    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
+    .pipe(rename('stile.min.css'))
+    .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
+}
+
+//HTML
+
+export const html = () => {
+  return gulp.src('source/*.html')
+  .pipe(htmlmin({ collapseWhitespace: true }))
+  .pipe(gulp.dest('build'));
+}
+
+//Scripts
+
+export const scripts = () => {
+  return gulp.src('source/js/*.js')
+  .pipe(terser())
+  .pipe(gulp.dest(build/js));
+}
+
+//Images
+
+export const iptimizeImg = () => {
+  return  gulp.src('source/img/**/*.{jpg,png}')
+  .pipe(squoosh())
+  .pipe(gulp.dest('build/img'));
+}
+
+export const copyImg = () => {
+  return  gulp.src('source/img/**/*.{jpg,png}')
+  .pipe(gulp.dest('build/img'));
+}
+
+//WebP
+
+export const createWebp = () => {
+  return gulp.src('source/img/**/*.jpg')
+  .pipe(squoosh({
+    webp:[]
+  }))
+  .pipe(gulp.dest('build.img'));
 }
 
 // Server
@@ -31,7 +70,7 @@ export const styles = () => {
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -49,5 +88,5 @@ const watcher = () => {
 
 
 export default gulp.series(
-  styles, server, watcher
+  styles, html, scripts, server, watcher
 );
