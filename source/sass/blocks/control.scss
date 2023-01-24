@@ -13,6 +13,11 @@
   height: 38px;
   margin-right: 5px;
 
+  @media #{$media-t} {
+    width: 52px;
+    height: 52px;
+  }
+
   &--radio {
     border-radius: 50%;
     width: 40px;

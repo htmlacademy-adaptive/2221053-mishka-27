@@ -56,12 +56,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100vw;
   min-height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(216, 226, 75);
+  background-color: rgba($color: #ffffff, $alpha: 0.5);
 
   &--hidden {
     display: none;

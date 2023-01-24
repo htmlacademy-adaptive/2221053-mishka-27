@@ -126,6 +126,11 @@
 
   &--search {
     width: 18px;
+    margin-left: -46px;
+
+    @media #{$media-t} {
+      margin-left: 0;
+    }
 
     & + span {
       margin-left: 26px;

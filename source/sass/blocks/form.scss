@@ -10,7 +10,19 @@
 
     @media #{$media-t} {
       margin-top: 0;
+      padding-bottom: 50px;
     }
+  }
+}
+
+.form__ico {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  opacity: 0.2;
+
+  @media #{$media-t} {
+    right: 26px;
   }
 }
 
@@ -43,6 +55,12 @@
       }
     }
   }
+
+  &--mail {
+    @media #{$media-t} {
+      padding-bottom: 50px;
+    }
+  }
 }
 
 .form__legend {
@@ -58,11 +76,17 @@
     margin-top: 29px;
   }
 
+  @media #{$media-d} {
+    justify-self: center;
+  }
+
   &--modal {
     font-weight: 400;
     font-size: 15px;
     line-height: 30px;
     color: var(--light-black);
+    letter-spacing: -0.5px;
+    margin-top: 16px;
   }
 
   &--line {
@@ -84,21 +108,43 @@
 
   &--name {
     margin-bottom: 28px;
+
+    @media #{$media-t} {
+      margin-top: 68px;
+    }
   }
 
   &--phone {
     margin-top: 12px;
     margin-bottom: 6px;
+
+    @media #{$media-t} {
+      margin-top: 66px;
+    }
   }
 
   &--mail {
     margin-top: 35px;
     margin-bottom: 6px;
+
+    @media #{$media-t} {
+      margin-top: 42px;
+    }
   }
 
   &--additionally {
     margin-top: 34px;
     margin-bottom: 23px;
+
+    @media #{$media-t} {
+      margin-top: 70px;
+    }
+  }
+
+  &--color {
+    @media #{$media-t} {
+      margin-top: 67px;
+    }
   }
 }
 
@@ -144,6 +190,10 @@
       gap: 26px;
       padding-bottom: 51px;
     }
+
+    @media #{$media-d} {
+      margin-left: -3px;
+    }
   }
 
   &--checkbox {
@@ -155,6 +205,31 @@
 
     @media #{$media-t} {
       margin-top: 50px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: start;
+      row-gap: 24px;
+      padding-bottom: 50px;
+    }
+
+    @media #{$media-d} {
+      margin-left: -1px;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-top: 46px;
+      column-gap: 12px;
+      width: 773px;
+    }
+  }
+
+  &--name {
+    @media #{$media-t} {
+      margin-top: 66px;
+      gap: 18px;
+      padding-bottom: 28px;
+    }
+
+    @media #{$media-d} {
+      grid-column: 2/6;
     }
   }
 }
@@ -163,6 +238,10 @@
   @include mixins.list-reset;
   display: flex;
   justify-content: center;
+
+  &--modal {
+    gap: 9px;
+  }
 }
 
 .form__label {
@@ -190,6 +269,11 @@
     align-items: flex-start;
     gap: 2px;
     margin-bottom: 22px;
+
+    @media #{$media-t} {
+      flex-direction: row;
+      gap: 25px;
+    }
   }
 
   &--modal {
@@ -198,12 +282,47 @@
 
   &--ico {
     position: relative;
+
+    @media #{$media-t} {
+      grid-column: 2/5;
+      justify-self: stretch;
+      margin-top: 61px;
+    }
   }
 
   &--radio {
     @media #{$media-t} {
       flex-direction: row;
     }
+
+    @media #{$media-d} {
+      gap: 29px;
+    }
+  }
+
+  &--checkbox {
+    flex-direction: row;
+  }
+
+  &--mail {
+    @media #{$media-t} {
+      margin-top: 35px;
+      letter-spacing: 1px;
+    }
+
+    & .form__ico {
+      @media #{$media-t} {
+        top: 5px;
+        right: 22px;
+      }
+    }
+  }
+
+  &--size {
+    display: block;
+    padding: 17px 32px;
+    border: 2px solid rgba(#444444, 0.1);
+    margin-top: 20px;
   }
 }
 
@@ -242,6 +361,9 @@
 
   @media #{$media-t} {
     padding-left: 17px;
+    padding-top: 2px;
+    flex-grow: 1;
+    letter-spacing: 1.5px;
   }
 
   &--multi {
@@ -251,28 +373,56 @@
     width: 100%;
     box-sizing: border-box;
     padding-left: 16px;
+
+    @media #{$media-t} {
+      margin-top: 50px;
+      padding-top: 15px;
+      font-size: 19px;
+      letter-spacing: 0;
+    }
+
+    @media #{$media-d} {
+      grid-column: 2/6;
+    }
+  }
+
+  &--ico {
+    @media #{$media-t} {
+      width: 100%;
+      box-sizing: border-box;
+      padding-bottom: 19px;
+      letter-spacing: unset;
+      padding-left: 18px;
+    }
   }
 }
 
 .form__fooutnote {
   margin-top: 10px;
-  margin-bottom: 26px;
+  margin-bottom: 31px;
   font-size: 14px;
   line-height: 16px;
 
   @media #{$media-t} {
     text-align: right;
     flex-grow: 1;
+    font-size: 17px;
+    line-height: 30px;
+    margin-top: 16px;
+    margin-bottom: 2px;
   }
 
   @media #{$media-d} {
-    grid-column: 4/7;
+    grid-column: 4/6;
   }
 }
 
 .form__button-wrap {
   @media #{$media-t} {
     display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 48px;
   }
 
   @media #{$media-d} {
@@ -288,19 +438,15 @@
   align-items: center;
   margin-top: 5px;
   padding: 12px 0;
+  background-color: transparent;
 
   @media #{$media-t} {
-    width: 230px;
+    width: 226px;
   }
 
   @media #{$media-d} {
     grid-column: 2/4;
+    grid-row: 1/2;
+    margin-top: 3px;
   }
-}
-
-.form__ico {
-  position: absolute;
-  top: 0;
-  right: 5px;
-  opacity: 0.2;
 }
