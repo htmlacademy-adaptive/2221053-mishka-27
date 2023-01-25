@@ -11,6 +11,19 @@
     display: grid;
     grid-template-columns: 1fr auto;
     padding-top: 42px;
+    background-image: image-set(
+      "../img/review 2.jpg" type("image/jpg")),
+      "../img/review 2.webp" type("image/webp");
+    background-size: 350px 457px;
+    background-repeat: no-repeat;
+    background-position: 0 7px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: image-set(
+        "../img/review 1.jpg" type("image/jpg")),
+        "../img/review 1.webp" type("image/webp");
+      background-size: 350px 457px;
+    }
   }
 
   @media #{$media-d} {
@@ -21,6 +34,11 @@
     background-size: 350px 457px;
     background-repeat: no-repeat;
     background-position: 0 7px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/review 1@2x.jpg");
+      background-size: 350px 457px;
+    }
   }
 }
 
@@ -101,6 +119,14 @@
 
   &:not(&:first-child) {
     margin-left: -1px;
+  }
+
+  &:hover .comment__nav-link {
+    opacity: 0.6;
+  }
+
+  &:active .comment__nav-link {
+    opacity: 0.3;
   }
 }
 

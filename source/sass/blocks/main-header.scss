@@ -52,6 +52,14 @@
     margin-left: 21px;
     height: 85px;
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main-header__logo-img {

@@ -44,6 +44,8 @@
   margin: 0;
   margin-top: 21px;
   margin-left: 28px;
+  color: #000000;
+  text-decoration: none;
 
   @media #{$media-t} {
     font-size: 20px;
@@ -54,6 +56,14 @@
   @media #{$media-d} {
     margin-top: 22px;
     margin-left: 27px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -119,6 +129,15 @@
   grid-area: button;
   align-self: end;
   opacity: 0.2;
+
+  &:hover {
+    opacity: 1;
+    fill: #63d1bb;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .card__button-ico {

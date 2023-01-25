@@ -24,18 +24,26 @@
   }
 
   &::after {
-    content: url("../img/ico/line-tablet.svg");
-    margin-top: -24px;
+    @media #{$media-t} {
+      content: "";
+      display: block;
+      position: absolute;
+      background-image: url("../img/line-tablet.svg");
+      width: 100vw;
+      height: 24px;
+      background-position: center 0;
+      background-repeat: repeat-x;
+      background-size: 770px 24px;
+      left: 0;
+      bottom: 0;
+      z-index: 20;
+    }
 
     @media #{$media-d} {
       content: "";
-      margin-top: -29px;
-      display: block;
-      background-image: url("../img/ico/line-tablet.svg");
-      width: 100vw;
-      background-position: center 0;
+      height: 34px;
+      background-image: url("../img/line-tablet.svg");
       background-size: 1250px 34px;
-      background-repeat: repeat-x;
     }
   }
 }
@@ -53,6 +61,14 @@
     width: 50%;
   }
 
+  &:hover {
+    margin-top: -5px;
+  }
+
+  &:active {
+    margin-top: 0;
+  }
+
   &--dark {
     background-color: var(--dark-green);
 
@@ -67,9 +83,26 @@
   @include mixins.link(var(--white-color));
   padding-top: 24px;
   padding-bottom: 13px;
+  z-index: 10;
 
   @media #{$media-t} {
     padding-bottom: 7px;
+  }
+
+  &:hover {
+    padding-bottom: 18px;
+
+    @media #{$media-t} {
+      padding-bottom: 12px;
+    }
+  }
+
+  &:active {
+    padding-bottom: 13px;
+
+    @media #{$media-t} {
+      padding-bottom: 7px;
+    }
   }
 }
 
@@ -96,14 +129,14 @@
   }
 
   &--lamp::after {
-    content: url("../img/ico/lamp.svg");
+    content: url("../img/lamp.svg");
     display: block;
     width: 40px;
     transform: translateX(-5px);
   }
 
   &--toy::after {
-    content: url("../img/ico/toy.svg");
+    content: url("../img/toy.svg");
     display: block;
     width: 60px;
     transform: translate(2px, -4px);

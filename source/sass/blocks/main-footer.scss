@@ -33,6 +33,7 @@
 
 .main-footer__logo {
   display: none;
+  color: var(--black-color);
 
   @media (min-width: 678px) {
     display: block;
@@ -41,5 +42,13 @@
   @media #{$media-d} {
     margin-left: -2px;
     margin-top: 2px;
+  }
+
+  &:hover {
+    color: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

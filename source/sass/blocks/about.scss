@@ -81,7 +81,7 @@
     height: 44px;
     background-position: 0 0;
 
-    background-image: url("../img/ico/flower.svg");
+    background-image: url("../img/flower.svg");
     margin-left: 8px;
 
     @media #{$media-t} {
@@ -95,7 +95,7 @@
     @include about-mixin();
 
     height: 54px;
-    background-image: url("../img/ico/money.svg");
+    background-image: url("../img/money.svg");
     background-position: 0 9px;
 
     @media #{$media-t} {
@@ -108,7 +108,7 @@
     @include about-mixin();
 
     height: 54px;
-    background-image: url("../img/ico/like.svg");
+    background-image: url("../img/like.svg");
     transform: translateX(6px);
 
     @media #{$media-t} {
@@ -121,7 +121,7 @@
     @include about-mixin();
 
     height: 52px;
-    background-image: url("../img/ico/tangle.svg");
+    background-image: url("../img/tangle.svg");
 
     @media #{$media-t} {
       margin-left: 3px;
@@ -133,7 +133,7 @@
     @include about-mixin();
 
     height: 52px;
-    background-image: url("../img/ico/rocket.svg");
+    background-image: url("../img/rocket.svg");
     background-position: 0 12px;
     transform: translateX(-5px);
 
@@ -147,7 +147,7 @@
     @include about-mixin();
 
     height: 54px;
-    background-image: url("../img/ico/gift.svg");
+    background-image: url("../img/gift.svg");
 
     @media #{$media-t} {
       background-position: 3px 37px;

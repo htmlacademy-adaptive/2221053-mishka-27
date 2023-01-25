@@ -63,6 +63,20 @@
   color: var(--light-green);
   padding: 0;
   border: none;
+
+  &:hover .product-create__play-ico {
+    width: 121px;
+    height: 82px;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    & + .product-create__video {
+      opacity: 0.3;
+    }
+  }
 }
 
 .product-create__title {
@@ -99,7 +113,7 @@
   }
 
   &::before {
-    content: url("../img/ico/camcorder.svg");
+    content: url("../img/camcorder.svg");
     display: block;
   }
 }
