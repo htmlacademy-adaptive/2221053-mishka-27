@@ -24,14 +24,14 @@
   }
 
   &::after {
-    content: url("../img/ico/line-tablet.svg");
+    content: url("../img/line-tablet.svg");
     margin-top: -24px;
 
     @media #{$media-d} {
       content: "";
       margin-top: -29px;
       display: block;
-      background-image: url("../img/ico/line-tablet.svg");
+      background-image: url("../img/line-tablet.svg");
       width: 100vw;
       background-position: center 0;
       background-size: 1250px 34px;
@@ -96,14 +96,14 @@
   }
 
   &--lamp::after {
-    content: url("../img/ico/lamp.svg");
+    content: url("../img/lamp.svg");
     display: block;
     width: 40px;
     transform: translateX(-5px);
   }
 
   &--toy::after {
-    content: url("../img/ico/toy.svg");
+    content: url("../img/toy.svg");
     display: block;
     width: 60px;
     transform: translate(2px, -4px);
