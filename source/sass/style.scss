@@ -61,3 +61,18 @@
     box-shadow: none;
   }
 }
+
+// *:focus {
+//   outline: none;
+//   position: relative;
+
+//   &::after {
+//     content: "";
+//     width: 100%;
+//     height: 2px;
+//     background-color: var(--light-green);
+//     position: absolute;
+//     bottom: -5px;
+//     left: 0;
+//   }
+// }

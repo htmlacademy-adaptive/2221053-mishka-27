@@ -4,6 +4,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
     <title>HTML Academy: Мишка</title>
   </head>
   <body class="page__body">
@@ -145,14 +160,16 @@
         </div>
         <div class="form__button-wrap">
           <p class="form__fooutnote">*Поля обязательны для заполнения</p>
-          <button class="form__button" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
+          <button class="button form__button" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
         </div>
       </form>
     </main>
     <footer class="main-footer">
       <div class="main-footer__wrap">
         <a class="main-footer__logo" href="#">
-          <img class="a" src="img/logo-footer.svg" width="102" height="34" alt="Логотип Мишки.">
+          <svg width="102" height="34"role="img" aria-label="Логотип Мишки.." focusable="false">
+            <use xlink:href="img/sprite.svg#logo-footer-ico"></use>
+          </svg>
         </a>
         <div class="main-footer__social social">
           <a class="social__link social__link--vkontakte" href="#">
@@ -174,7 +191,9 @@
         <div class="main-footer__copyright copyright">
           <b class="copyright__text">Разработано</b>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="copyright__link-ico" src="img/htmlacademy.svg" alt="HTML-academy.">
+            <svg class="copyright__link-ico" width="27" height="34"role="img" aria-label="HTML-academy." focusable="false">
+              <use xlink:href="img/sprite.svg#htmlacademy-ico"></use>
+            </svg>
           </a>
         </div>
       </div>

@@ -13,6 +13,18 @@
   }
 }
 
+.copyright__link {
+  color: #63d1bb;
+
+  &:hover {
+    color: #63d1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .copyright__link-ico {
   width: 27px;
   height: 34px;

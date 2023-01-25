@@ -136,3 +136,27 @@
     grid-column: 2/3;
   }
 }
+
+.cantacts__link {
+  position: relative;
+  text-decoration: none;
+  color: #000000;
+
+  &:hover {
+    color: #46c1ae;
+  }
+
+  &:active::before {
+    opacity: 0.1;
+  }
+
+
+  &::before {
+    content: "";
+    border: 1px solid #46c1ae;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -5px;
+  }
+}
