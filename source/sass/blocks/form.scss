@@ -13,6 +13,12 @@
       padding-bottom: 50px;
     }
   }
+
+  &--modal {
+    @media #{$media-t} {
+      width: 567px;
+    }
+  }
 }
 
 .form__ico {
@@ -89,6 +95,10 @@
     color: var(--light-black);
     letter-spacing: -0.5px;
     margin-top: 16px;
+
+    @media #{$media-t} {
+      margin-top: 12px;
+    }
   }
 
   &--line {
@@ -243,6 +253,10 @@
 
   &--modal {
     gap: 9px;
+
+    @media #{$media-t} {
+      margin-top: 7px;
+    }
   }
 }
 
@@ -325,6 +339,11 @@
     padding: 17px 32px;
     border: 2px solid rgba(#444444, 0.1);
     margin-top: 20px;
+
+    @media #{$media-t} {
+      margin-top: 10px;
+      padding: 17px 46px;
+    }
   }
 }
 

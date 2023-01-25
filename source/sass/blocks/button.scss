@@ -19,5 +19,11 @@
     text-transform: uppercase;
     padding-top: 18px;
     padding-bottom: 14px;
+
+    @media #{$media-t} {
+      width: auto;
+      padding-left: 127px;
+      padding-right: 127px;
+    }
   }
 }

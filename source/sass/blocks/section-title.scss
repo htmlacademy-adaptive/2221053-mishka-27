@@ -37,5 +37,13 @@
     margin: 29px 20px 0;
     text-align: left;
     padding-left: 68px;
+
+    @media #{$media-t} {
+      font-size: 30px;
+      line-height: 57px;
+      text-align: center;
+      padding: 0;
+      margin-top: 39px;
+    }
   }
 }
