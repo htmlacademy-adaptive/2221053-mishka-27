@@ -9,6 +9,7 @@
 
   @media #{$media-t} {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &--desktop {
@@ -17,7 +18,7 @@
     @media #{$media-d} {
       display: flex;
       width: 100%;
-      gap: 50px;
+      column-gap: 50px;
     }
   }
 

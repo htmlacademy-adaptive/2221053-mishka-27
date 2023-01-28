@@ -32,6 +32,11 @@
     right: 26px;
     display: block;
   }
+
+  @media #{$media-d} {
+    right: 7px;
+    top: 2px;
+  }
 }
 
 .form__fieldset {
@@ -132,6 +137,11 @@
 
     @media #{$media-t} {
       margin-top: 66px;
+    }
+
+    @media #{$media-d} {
+      padding-right: 22px;
+      margin-top: 69px;
     }
   }
 
@@ -304,6 +314,12 @@
       justify-self: stretch;
       margin-top: 61px;
     }
+
+    @media #{$media-d} {
+      grid-column: 2/6;
+      justify-self: stretch;
+      margin-top: 61px;
+    }
   }
 
   &--radio {
@@ -328,8 +344,8 @@
 
     & .form__ico {
       @media #{$media-t} {
-        top: 5px;
-        right: 22px;
+        top: 7px;
+        right: 3px;
       }
     }
   }
@@ -399,6 +415,11 @@
     letter-spacing: 1.5px;
   }
 
+  &::placeholder {
+    color: #000000;
+    opacity: 0.3;
+  }
+
   &--multi {
     box-shadow: none;
     border: 2px solid  var(--light-black);
@@ -423,26 +444,27 @@
     @media #{$media-t} {
       width: 100%;
       box-sizing: border-box;
+      padding-top: 4px;
       padding-bottom: 19px;
       letter-spacing: unset;
       padding-left: 18px;
     }
 
     &:hover + .form__ico,
-    &:active + .form__ico {
+    &:focus + .form__ico {
       fill: #62d1ba;
       opacity: 1;
     }
   }
 
   &:hover,
-  &:active {
+  &:focus {
     box-shadow: inset 0 -2px 0 #62d1ba;
     outline: none;
   }
 
   &--multi:hover,
-  &--multi:active {
+  &--multi:focus {
     box-shadow: none;
     outline: none;
     border-color: #62d1ba;
@@ -480,6 +502,7 @@
   @media #{$media-d} {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    align-items: start;
   }
 }
 
@@ -489,11 +512,12 @@
   justify-content: center;
   align-items: center;
   margin-top: 5px;
-  padding: 12px 0;
+  padding: 14px 0;
   background-color: transparent;
+  width: 100%;
 
   @media #{$media-t} {
-    width: 226px;
+    width: 230px;
   }
 
   @media #{$media-d} {

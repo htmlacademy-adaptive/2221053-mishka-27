@@ -90,11 +90,12 @@ export const sprite = () => {
 const copy = () => {
   return gulp.src([
     'source/fonts/*.{woff,woff2}',
-    'source/*.ico'
+    'source/*.ico',
+    'source/manifest.json'
   ], {
     base: 'source'
   })
-  .pipe(gulp.dest('build/fonts'))
+  .pipe(gulp.dest('build'))
   done();
 }
 

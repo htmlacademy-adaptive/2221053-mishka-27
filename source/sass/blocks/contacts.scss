@@ -56,7 +56,7 @@
   @include mixins.container;
   @include mixins.link;
   width: 246px;
-  margin-top: 41px;
+  margin-top: 39px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   padding: 5px;
@@ -64,7 +64,7 @@
   padding-bottom: 13px;
 
   @media #{$media-t} {
-    margin-top: 55px;
+    margin-top: 58px;
     width: 216px;
   }
 
@@ -117,27 +117,89 @@
   }
 }
 
+.contacts__map-wrap {
+  background-color: #ffffff;
+  background-image: url("../img/map-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  position: relative;
+  margin-top: 62px;
+  width: 100%;
+  height: 454px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map-mobile@2x.jpg");
+    background-size: 100% auto;
+  }
+
+  @media (min-width: 708px) {
+    margin-top: 48px;
+    background-image: url("../img/map-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: 1060px) {
+    margin-top: 19px;
+    margin-left: 21px;
+    height: 458px;
+    background-image: url("../img/map-desktop.jpg");
+    background-size: 527px auto;
+    grid-row: 1/3;
+    grid-column: 2/3;
+    align-self: start;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-desktop@2x.jpg");
+      background-size: 527px auto;
+    }
+  }
+}
+
+.contact__map-pin {
+  position: absolute;
+  top: 31%;
+  left: 43%;
+  display: none;
+
+  @media #{$media-t} {
+    top: 31%;
+    left: 47%;
+  }
+
+  @media #{$media-d} {
+    top: 32%;
+    left: 45%;
+  }
+}
+
 .contacts__map {
   width: 100vw;
   display: block;
   border: none;
-  margin-top: 62px;
 
   @media #{$media-t} {
     height: 457px;
-    margin-top: 48px;
   }
 
   @media #{$media-d} {
     width: 527px;
-    margin-top: 18px;
-    margin-left: 20px;
     grid-row: 1/3;
     grid-column: 2/3;
   }
+
+  &--nojs {
+    display: none;
+
+    & + .contact__map-pin {
+      display: block;
+    }
+  }
 }
 
-.cantacts__link {
+.contacts__link {
   position: relative;
   text-decoration: none;
   color: #000000;
@@ -158,5 +220,9 @@
     width: 100%;
     left: 0;
     bottom: -5px;
+
+    @media #{$media-d} {
+      bottom: -11px;
+    }
   }
 }

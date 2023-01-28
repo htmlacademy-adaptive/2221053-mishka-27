@@ -21,7 +21,7 @@
     @media #{$media-t} {
       position: relative;
       margin-top: 61px;
-      padding-bottom: 67px;
+      padding-bottom: 85px;
     }
 
     &::before {
@@ -29,7 +29,7 @@
         content: "";
         position: absolute;
         display: block;
-        background-image: url("../img/review 2.jpg");
+        background-image: url("../img/review-2.jpg");
         background-repeat: no-repeat;
         background-position: 0 0;
         background-size: 350px auto;
@@ -39,7 +39,7 @@
         left: 0;
 
         @media (min-resolution: 2dppx) {
-          background-image: url("../img/review 2@2x.jpg");
+          background-image: url("../img/review-2@2x.jpg");
         }
 
         @media #{$media-d} {

@@ -18,18 +18,19 @@
     grid-template-columns: 100px 292px auto;
     grid-template-areas: "type title img" ". description img" ". parameter img" ". price img" ". button img" ". . img";
     column-gap: 28px;
-    padding-left: 45px;
-    margin-top: 15px;
+    padding-left: 38px;
+    margin-top: 10px;
     align-items: start;
   }
 }
 
 .promo__title {
   margin-bottom: 0;
+  margin-top: 31px;
 
   @media #{$media-t} {
     grid-area: title;
-    margin-top: 0;
+    margin-top: 8px;
   }
 
   @media #{$media-d} {
@@ -51,7 +52,7 @@
     text-align: center;
     width: 75px;
     line-height: 19px;
-    margin-top: 5px;
+    margin-top: 11px;
   }
 
   @media #{$media-d} {
@@ -114,6 +115,8 @@
   @media #{$media-d} {
     width: 525px;
     justify-self: end;
+    margin-right: 7px;
+    margin-top: 22px;
   }
 }
 
@@ -125,7 +128,7 @@
   @media #{$media-t} {
     font-size: 20px;
     grid-area: price;
-    margin-top: 66px;
+    margin-top: 71px;
   }
 
   @media #{$media-d} {
@@ -143,6 +146,12 @@
 
   @media #{$media-t} {
     grid-area: button;
+    margin-top: 12px;
+  }
+
+  @media #{$media-d} {
     margin-top: 11px;
+    margin-left: -1px;
+    width: 288px;
   }
 }

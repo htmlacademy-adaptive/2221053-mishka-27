@@ -10,21 +10,55 @@
 
   @media #{$media-t} and (max-width: $desktop) {
     grid-template-columns: auto 216px auto 1fr;
-    grid-template-rows: auto auto 1fr 26px;
-    grid-template-areas: "photo title title title" "photo description description description" "photo price button ." "photo . . .";
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas: "photo title title title" "photo description description description" "photo price button .";
     column-gap: 32px;
     padding-bottom: 0;
+    align-items: start;
   }
 
   @media #{$media-d} {
     margin: 0;
     width: 316px;
     grid-template-columns: 1fr 1fr 53px;
+    position: relative;
+  }
+
+  &:hover::before {
+    @media #{$media-d} {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: calc(100% - 462px);
+      z-index: -1;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &:focus-within::before {
+    @media #{$media-d} {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: calc(100% - 462px);
+      z-index: -1;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    }
   }
 }
 
-.card__photo {
+.card__photo-link {
   grid-area: photo;
+}
+
+.card__photo {
+  display: block;
 
   @media #{$media-t} {
     width: 334px;
@@ -102,6 +136,11 @@
       width: 268px;
       bottom: -175px;
     }
+
+    @media #{$media-t} {
+      width: 268px;
+      bottom: -30px;
+    }
   }
 }
 
@@ -112,10 +151,11 @@
   margin-bottom: 0;
   margin-top: 42px;
   margin-left: 27px;
+  align-self: end;
 
   @media #{$media-t} {
     font-size: 17px;
-    align-self: end;
+    margin-bottom: 26px;
     margin-left: 0;
   }
 
@@ -129,6 +169,11 @@
   grid-area: button;
   align-self: end;
   opacity: 0.2;
+  margin-top: 43px;
+
+  @media #{$media-t} {
+    margin-bottom: 27px;
+  }
 
   &:hover {
     opacity: 1;
