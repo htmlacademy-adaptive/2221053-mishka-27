@@ -20,7 +20,7 @@
   @include mixins.list-reset;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 28px;
 
   @media #{$media-t} {
     gap: 52px;

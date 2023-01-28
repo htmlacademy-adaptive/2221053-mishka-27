@@ -11,32 +11,21 @@
     display: grid;
     grid-template-columns: 1fr auto;
     padding-top: 42px;
-    background-image: image-set(
-      "../img/review 2.jpg" type("image/jpg")),
-      "../img/review 2.webp" type("image/webp");
-    background-size: 350px 457px;
-    background-repeat: no-repeat;
-    background-position: 0 7px;
-
-    @media (min-resolution: 2dppx) {
-      background-image: image-set(
-        "../img/review 1.jpg" type("image/jpg")),
-        "../img/review 1.webp" type("image/webp");
-      background-size: 350px 457px;
-    }
   }
 
   @media #{$media-d} {
     padding-left: 175px;
-    width: 874px;
+    width: 1066px;
     padding-bottom: 102px;
-    background-image: url("../img/review 1.jpg");
+    background-image: url("../img/review-1.jpg");
     background-size: 350px 457px;
     background-repeat: no-repeat;
     background-position: 0 7px;
+    box-sizing: border-box;
+    grid-template-columns: 1fr 191px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/review 1@2x.jpg");
+      background-image: url("../img/review-1@2x.jpg");
       background-size: 350px 457px;
     }
   }
@@ -77,6 +66,8 @@
   @media #{$media-t} {
     font-size: 18px;
     margin-top: 30px;
+    display: flex;
+    flex-direction: column;
   }
 
   @media #{$media-d} {
@@ -156,5 +147,6 @@
 
   @media #{$media-d} {
     margin-top: 44px;
+    justify-self: start;
   }
 }
