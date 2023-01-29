@@ -158,7 +158,7 @@
   }
 }
 
-.contact__map-pin {
+.contacts__map-pin {
   position: absolute;
   top: 31%;
   left: 43%;
@@ -193,7 +193,7 @@
   &--nojs {
     display: none;
 
-    & + .contact__map-pin {
+    & + .contacts__map-pin {
       display: block;
     }
   }
